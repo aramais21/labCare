@@ -16,7 +16,7 @@ const Navbar = () => {
                 </Link>
                 {/* menu elements */}
                 <div className = {isSideMenuActive?'MenuOutterActive':'MenuOutter'} >
-                    <MenuItem to = '/' name = 'About Us' ></MenuItem>
+                    <MenuItem to = '/about' name = 'About Us' ></MenuItem>
                     <MenuItem to = '/services' name = 'Services' ></MenuItem>
                     <MenuItem to = '/products' name = 'Products' ></MenuItem>
                 </div>

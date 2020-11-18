@@ -28,6 +28,12 @@ body {
   .ItemOutter, .ItemOutterActive {
     margin: 1rem !important;
   }
+  .ImgContWelcome {
+    font-size: 2rem !important;    
+  }
+  .ImgContMoto {
+    font-size: 1.2rem !important;
+  }
 }
 
 @keyframes App-logo-spin {

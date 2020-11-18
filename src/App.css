@@ -16,7 +16,7 @@ body {
   flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   -webkit-box-shadow: 0px 8px 8px -4px rgba(0,0,0,0.75);
@@ -24,11 +24,10 @@ body {
   box-shadow: 0px 8px 8px -4px rgba(0,0,0,0.75);
   z-index: 100;
 }
-/* Navbar */
 .NavInner {
   width: 80%;
   height: 100%;
-  min-width: 22.5rem;
+  min-width: 21.5rem;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -176,4 +175,140 @@ body {
 .HamActive span:nth-child(2) {
   opacity: 0;
   transform: translate(-1rem, 0);
+}
+/* Home */
+.HomeMain {
+  width: 100%;
+  padding-top: 5.525rem;
+}
+  /* Img Cont */
+.ImgCont {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('./assets//main.jpg');
+  padding: 4rem 0;
+}
+.ImgContBack {
+  width: 100%;
+  height: 100%;  
+}
+.ImgContInfo {
+  width: 80%;
+  min-width: 22.5rem;
+  margin: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+.ImgContWelcome {
+  font-size: 5rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 800;
+  color: #F5F5F5;
+  text-align: center;
+  text-shadow: 0px 2px 2px rgba(0,0,0,0.77);
+  text-transform: uppercase;
+}
+.ImgContMoto {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #F5F5F5;
+  font-size: 2.5rem;
+  text-align: center;
+  text-shadow: 0px 2px 2px rgba(0,0,0,0.77);
+  text-transform: capitalize;
+}
+.ImgContBranches {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+    /* Branch */
+.Branch {
+  min-width: 12.5rem;
+  width: 20%;
+  height: 25.75rem;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  position: relative;
+}
+.BranchIconCont {
+  width: 10rem;
+  height: 10rem;
+  background-color: #F5F5F5;
+  border-radius: 100rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+.BracnchIconImg {
+  width: 70%;
+  height: 70%;
+}
+.BranchText {
+  color: #E57524;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.FloatingPlanet {
+  width: 3rem;
+  height: 3rem;
+  background-color: #1AA55D;
+  border-radius: 2rem;
+  position: absolute;
+  top: 12rem;
+  opacity: 1;
+  left: 20%;
+  transform: translate(-50%,-50%);
+  transition: all 0.2s linear;
+}
+.Branch:hover .FloatingPlanet{
+  animation: setalite 1.5s infinite;
+}
+
+@keyframes setalite {
+  0% {
+    top: 12rem;
+    left: 20%;
+    opacity: 1;
+  }
+  50% {
+    top: 3rem;
+    left: 80%;
+    opacity: 1;
+  }
+  55% {
+    top: 4.815rem;
+    left: 70.1%;
+    opacity: 0;
+  }
+  62.5% {
+    top: 5.75rem;
+    left: 65%;
+    opacity: 0;
+  }
+  75% {
+    top: 8.5rem;
+    left: 50%;
+    opacity: 0;
+  } 
+  87.5% {
+    top: 10.25rem;
+    left:35%;
+    opacity: 0;
+  }
+  100% {
+    top: 12rem;
+    left: 20%;
+    opacity: 1;
+  }
 }

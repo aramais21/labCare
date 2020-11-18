@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
 
 // importing pages 
 import Home from './Pages/Home';
+import AboutUs from './Pages/AboutUs';
 import Services from './Pages/Services';
 import Products from './Pages/Products';
 import Product from './Pages/Product';
@@ -22,6 +23,9 @@ function App() {
       <Switch>
         <Route exact path = '/'>
           <Home />
+        </Route>
+        <Route path = '/about'>
+          <AboutUs></AboutUs>
         </Route>
         <Route path = '/services'>
           <Services/>
