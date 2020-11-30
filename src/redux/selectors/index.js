@@ -1,0 +1,1 @@
+export const goToSelector = (state) => state.goTo;

@@ -1,6 +1,9 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 
+// Css
+import '../Css/Components/MenuItem.css';
+
 const MenuItem = ({to, name}) => {
     return(
     <NavLink to = {to}  className = 'ItemOutter' >

@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 
+// Components
 import Branch from './Branch';
 
-// import images
+// Css
+import '../Css/Components/Branches.css'
+
+// Images
 import yeast from '../assets/yeast.png';
 import mining from '../assets/mining.png';
 import training from '../assets/training.png';

@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
-import {NavLink, Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
-// import Logo 
+// Components 
 import logo from '../assets/logo.jpg';
 import MenuItem from './MenuItem';
+
+// Css
+import '../Css/Components/Navbar.css';
 
 const Navbar = () => {
     const [isSideMenuActive, setIsSideMenuActive] = useState(false);

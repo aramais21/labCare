@@ -1,0 +1,47 @@
+* { 
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+}
+
+@keyframes setalite {
+  0% {
+    top: 12rem;
+    left: 20%;
+    opacity: 1;
+  }
+  50% {
+    top: 3rem;
+    left: 80%;
+    opacity: 1;
+  }
+  55% {
+    top: 4.815rem;
+    left: 70.1%;
+    opacity: 0;
+  }
+  62.5% {
+    top: 5.75rem;
+    left: 65%;
+    opacity: 0;
+  }
+  75% {
+    top: 8.5rem;
+    left: 50%;
+    opacity: 0;
+  } 
+  87.5% {
+    top: 10.25rem;
+    left:35%;
+    opacity: 0;
+  }
+  100% {
+    top: 12rem;
+    left: 20%;
+    opacity: 1;
+  }
+}

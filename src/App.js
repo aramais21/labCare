@@ -1,8 +1,11 @@
 import React from 'react';
-import './App.css';
-import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import {Provider} from 'react-redux';
 
-// importing pages 
+// Redux
+import store from './redux/store/index'; 
+
+// Pages 
 import Home from './Pages/Home';
 import AboutUs from './Pages/AboutUs';
 import Services from './Pages/Services';
@@ -11,12 +14,16 @@ import Product from './Pages/Product';
 import Projects from './Pages/Projects';
 import Project from './Pages/Project';
 
-// importing components
+// Components
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
 
+// Css
+import './Css/App.css';
+
 function App() {
   return (
+    <Provider store = {store} >
     <Router>
       <Navbar></Navbar>
 
@@ -46,6 +53,7 @@ function App() {
 
       <Footer></Footer>      
     </Router>
+    </Provider>
   );
 }
 
