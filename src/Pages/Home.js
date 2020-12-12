@@ -28,7 +28,7 @@ const Home = () => {
                 return sectionPredictor(item);
             })} */}
             <Branches/>
-            <SectionDevider main = {"Our projects"} secondary = {"See our works and become asured of their quality "} />
+            <SectionDevider text = {'Our projects'} color = {'orange'} />
             <ProjectsList/>
         </div>
     )

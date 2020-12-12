@@ -21,3 +21,12 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# nonsensical stuff
+10
+client
+client@0.1.0
+react-scripts
+server
+value
+with

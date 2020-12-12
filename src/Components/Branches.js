@@ -21,7 +21,6 @@ const Branches = () => {
     ])
     return (
         <div className = 'ImgCont' >
-            {/* <img className = 'ImgContBack'  src = 'https://previews.123rf.com/images/puhhha/puhhha1803/puhhha180300062/96537002-scientist-with-plant-in-scientific-laboratory-mature-woman-holding-test-tube-with-plant-seedling-wor.jpg' ></img> */}
             <div className = 'ImgContInfo' >
                 <p className = 'ImgContWelcome' >Welcome to LabCare</p>
                 <p className = 'ImgContMoto' > lab and mining related stuff</p>
