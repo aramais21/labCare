@@ -13,15 +13,12 @@ const ProjectCard = ({id,name,desc,imageUrl}) => {
     const goTo = useSelector(goToSelector);
 
     return (
-        <div className = 'main' >
+        <div className = 'main' onClick = {() => {goTo(`/project/${id}`,history)}} >
             <img className = 'img'  src = {imageUrl} ></img>
             <div className = 'infoCont' >
                 <div className = 'info' >
                     <div className = 'name' > {name} </div>
                     <div className = 'desc' > {desc} </div>
-                    <div className = 'btn'  onClick = {() => {goTo(`/project/${id}`,history)}}>
-                        see more
-                    </div>
                 </div>
             </div>
         </div>
