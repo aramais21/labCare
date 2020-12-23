@@ -4,9 +4,9 @@ import React, { useState } from 'react';
 import Branches from '../Components/Branches';
 import ProjectsList from '../Components/ProjectsList';
 import SectionDeviderText from '../Components/SectionDeviderText';
+import SectionDeviderImage from '../Components/SectionDeviderImage';
 
 // Css
-
 import '../Css/Pages/Home.css'
 
 const Home = () => {
@@ -30,6 +30,7 @@ const Home = () => {
             <Branches/>
             <SectionDeviderText text = {'Our projects'} color = {'orange'} />
             <ProjectsList/>
+            <SectionDeviderImage />
             <SectionDeviderText text =  {'Our partners'} color = {'green'} />
         </div>
     )
