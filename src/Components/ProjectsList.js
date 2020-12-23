@@ -1,18 +1,14 @@
 import React from 'react';
-import {useSelector} from 'react-redux';
 import {useHistory} from 'react-router-dom';
 
-// Selector
-import {goToSelector} from '../redux/selectors'
-
 // Components
-import ProjectCard from './ProjectCard'
+import ProjectCard from './ProjectCard';
+import Button from './Button';
 
 // Css
-import '../Css/Components/ProjectsList.css'
+import '../Css/Components/ProjectsList.css';
 
 const ProjectsList = () => {
-    const goTo = useSelector(goToSelector);
     const history = useHistory();
     const data = [
         {
@@ -32,6 +28,12 @@ const ProjectsList = () => {
             name:'Project 2',
             desc:'This is a project we were working on during the last year. We succeded in bringing the feeling of acomplishment back to the firm',
             imageUrl:'https://images.pexels.com/photos/3735715/pexels-photo-3735715.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+        },
+        {
+            id: Math.floor(Math.random()*10000),
+            name:'Project 2',
+            desc:'This is a project we were working on during the last year. We succeded in bringing the feeling of acomplishment back to the firm',
+            imageUrl:'https://images.pexels.com/photos/3735715/pexels-photo-3735715.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
         }   
     ]
     return (
@@ -41,11 +43,7 @@ const ProjectsList = () => {
                     return <ProjectCard key = {item.id} {...item} />
                 })}
             </div>
-            <div className = 'btnProject' onClick = {() => {goTo('/projects', history)}} >
-                Show More
-                <div className = 'arrow' >
-                </div>
-            </div>
+            <Button text = 'Show More' path = '/projects' color = 'Orange' history = {history} />
         </div>
     )
 }
