@@ -4,6 +4,8 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+import './fonts/Century_Gothic.ttf';
+
 // Css
 import './Css/index.css';
 

@@ -44,3 +44,8 @@ body {
     transform: rotate(360deg);
   }
 }
+
+@font-face {
+  font-family: 'CenturyGothic';
+  src: local('CenturyGothic'), url(../fonts/Century_Gothic.ttf) format('truetype');
+}

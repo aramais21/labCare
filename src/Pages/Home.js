@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 // Components
 import Branches from '../Components/Branches';
 import ProjectsList from '../Components/ProjectsList';
-import SectionDevider from '../Components/SectionDevider';
+import SectionDeviderText from '../Components/SectionDeviderText';
 
 // Css
 
@@ -28,8 +28,9 @@ const Home = () => {
                 return sectionPredictor(item);
             })} */}
             <Branches/>
-            <SectionDevider text = {'Our projects'} color = {'orange'} />
+            <SectionDeviderText text = {'Our projects'} color = {'orange'} />
             <ProjectsList/>
+            <SectionDeviderText text =  {'Our partners'} color = {'green'} />
         </div>
     )
 }
