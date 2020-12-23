@@ -51,7 +51,7 @@
 .btnProjectOrange:hover {
     color: #e57424;
 }
-.btnProject:hover .arrow, .btnProjectOrange:hover .arrow {
+.btnProjectGreen:hover .arrow, .btnProjectOrange:hover .arrow {
     opacity: 1;
     left: 85%;
 }

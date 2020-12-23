@@ -5,6 +5,7 @@ import Branches from '../Components/Branches';
 import ProjectsList from '../Components/ProjectsList';
 import SectionDeviderText from '../Components/SectionDeviderText';
 import SectionDeviderImage from '../Components/SectionDeviderImage';
+import PartnerList from '../Components/PartnerList';
 
 // Css
 import '../Css/Pages/Home.css'
@@ -32,6 +33,7 @@ const Home = () => {
             <ProjectsList/>
             <SectionDeviderImage />
             <SectionDeviderText text =  {'Our partners'} color = {'green'} />
+            <PartnerList timeInterval = {5000}/>
         </div>
     )
 }
