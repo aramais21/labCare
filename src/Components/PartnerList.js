@@ -2,6 +2,8 @@ import React, {useState, useEffect, memo} from 'react';
 import {useHistory} from 'react-router-dom';
 import {isEqual} from 'lodash';
 
+import Partner from './Partner.js';
+
 import '../Css/Components/PartnerList.css';
 
 const PartnerList = ({timeInterval}) => {
@@ -11,33 +13,39 @@ const PartnerList = ({timeInterval}) => {
     const data = [
         {
             id: Math.floor(Math.random()*10000),
-            logo: 'https://lh3.googleusercontent.com/proxy/Cdhgjpgnp8R6W9oKm8lmBjxtCGVEhTnARovOc7rmhr-df7GGtByK9DoApDZOFYKstYw6CBaeAw83-HuftayvyaNPT51Odixycu24CqXRvsTPmw',
-            url: 'https://www.youtube.com/watch?v=WjOk3CjTbGo&ab_channel=IztvNetwork'
+            logo: 'https://assets.stickpng.com/thumbs/58406746657b0e0e08612e45.png',
+            url: 'https://www.youtube.com/watch?v=WjOk3CjTbGo&ab_channel=IztvNetwork',
+            alt: 'logo'
         },
         {
             id: Math.floor(Math.random()*10000),
-            logo: 'https://lh3.googleusercontent.com/proxy/Cdhgjpgnp8R6W9oKm8lmBjxtCGVEhTnARovOc7rmhr-df7GGtByK9DoApDZOFYKstYw6CBaeAw83-HuftayvyaNPT51Odixycu24CqXRvsTPmw',
-            url: 'https://www.youtube.com/watch?v=WjOk3CjTbGo&ab_channel=IztvNetwork'
+            logo: 'https://assets.stickpng.com/thumbs/58406746657b0e0e08612e45.png',
+            url: 'https://www.youtube.com/watch?v=WjOk3CjTbGo&ab_channel=IztvNetwork',
+            alt: 'logo'
         },
         {
             id: Math.floor(Math.random()*10000),
-            logo: 'https://lh3.googleusercontent.com/proxy/Cdhgjpgnp8R6W9oKm8lmBjxtCGVEhTnARovOc7rmhr-df7GGtByK9DoApDZOFYKstYw6CBaeAw83-HuftayvyaNPT51Odixycu24CqXRvsTPmw',
-            url: 'https://www.youtube.com/watch?v=WjOk3CjTbGo&ab_channel=IztvNetwork'
+            logo: 'https://assets.stickpng.com/thumbs/58406746657b0e0e08612e45.png',
+            url: 'https://www.youtube.com/watch?v=WjOk3CjTbGo&ab_channel=IztvNetwork',
+            alt: 'logo'
         },
         {
             id: Math.floor(Math.random()*10000),
-            logo: 'https://lh3.googleusercontent.com/proxy/Cdhgjpgnp8R6W9oKm8lmBjxtCGVEhTnARovOc7rmhr-df7GGtByK9DoApDZOFYKstYw6CBaeAw83-HuftayvyaNPT51Odixycu24CqXRvsTPmw',
-            url: 'https://www.youtube.com/watch?v=WjOk3CjTbGo&ab_channel=IztvNetwork'
+            logo: 'https://assets.stickpng.com/thumbs/58406746657b0e0e08612e45.png',
+            url: 'https://www.youtube.com/watch?v=WjOk3CjTbGo&ab_channel=IztvNetwork',
+            alt: 'logo'
         },
         {
             id: Math.floor(Math.random()*10000),
-            logo: 'https://lh3.googleusercontent.com/proxy/Cdhgjpgnp8R6W9oKm8lmBjxtCGVEhTnARovOc7rmhr-df7GGtByK9DoApDZOFYKstYw6CBaeAw83-HuftayvyaNPT51Odixycu24CqXRvsTPmw',
-            url: 'https://www.youtube.com/watch?v=WjOk3CjTbGo&ab_channel=IztvNetwork'
+            logo: 'https://assets.stickpng.com/thumbs/58406746657b0e0e08612e45.png',
+            url: 'https://www.youtube.com/watch?v=WjOk3CjTbGo&ab_channel=IztvNetwork',
+            alt: 'logo'
         },
         {
             id: Math.floor(Math.random()*10000),
-            logo: 'https://lh3.googleusercontent.com/proxy/Cdhgjpgnp8R6W9oKm8lmBjxtCGVEhTnARovOc7rmhr-df7GGtByK9DoApDZOFYKstYw6CBaeAw83-HuftayvyaNPT51Odixycu24CqXRvsTPmw',
-            url: 'https://www.youtube.com/watch?v=WjOk3CjTbGo&ab_channel=IztvNetwork'
+            logo: 'https://assets.stickpng.com/thumbs/58406746657b0e0e08612e45.png',
+            url: 'https://www.youtube.com/watch?v=WjOk3CjTbGo&ab_channel=IztvNetwork',
+            alt: 'logo'
         },
     ];
 
@@ -63,7 +71,9 @@ const PartnerList = ({timeInterval}) => {
                 <button className = 'controller' ></button>
             </div>
             <div className = {`list center`}  >
-                list
+                {data.map((item,index) => {
+                    return <Partner {...item} key = {item.id} index = {index} />
+                })}
             </div>
             <div className = 'rightArrow' >
                 <button className = 'controller' ></button>

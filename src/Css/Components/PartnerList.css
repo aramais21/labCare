@@ -19,6 +19,8 @@
     border-top: 0.025rem solid #000000;
     border-right: 0.025rem solid #000000;
     cursor: pointer;
+    outline: none;
+    background-color: #fff;
 }
 .leftArrow .controller {
     transform: rotate(-135deg);
@@ -31,6 +33,5 @@
     height: 100%;
     overflow: hidden;
     display: flex;
-    justify-content: space-around;
     align-items: center;
 }
