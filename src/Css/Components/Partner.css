@@ -1,12 +1,20 @@
 .partnerCont {
-    width: 12.5rem;
-    height: 12.5rem;
+    min-width: 12.5rem;
+    min-height: 12.5rem;
     overflow: hidden;
     background-color: red;
     border-radius: 100%;
     margin: 0 1rem;
     cursor: pointer;
     position: relative;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+}
+.movedFromLeft {
+    animation-name: movingFromLeft;
+}
+.movedFromRight {
+    animation-name: movingFromRight;
 }
 .partnerContGreen {
     background-color: #1aa55d;
@@ -47,4 +55,22 @@
 
 .partnerCont:hover .partnerSlider {
     bottom: 0;
+}
+
+@keyframes movingFromLeft{
+    0% {
+        transform: translate(-12.5rem, 0);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes movingFromRight {
+    0% {
+        transform: translate(12.5rem, 0);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
 }

@@ -8,6 +8,7 @@
 }
 .leftArrow, .rightArrow {
     width: 15%;
+    min-width: 4.5rem;
     height: 15%;
     display: flex;
     justify-content: center;

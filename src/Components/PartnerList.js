@@ -1,79 +1,89 @@
 import React, {useState, useEffect, memo} from 'react';
 import {useHistory} from 'react-router-dom';
 import {isEqual} from 'lodash';
+import {produce} from 'immer';
 
 import Partner from './Partner.js';
 
 import '../Css/Components/PartnerList.css';
 
 const PartnerList = ({timeInterval}) => {
-    const history = useHistory();
-    const [itemIndex, setItemIndex] = useState(0);
-    
-    const data = [
+    const history = useHistory();    
+    const [data, setData] = useState([
         {
-            id: Math.floor(Math.random()*10000),
+            id: 0,
             logo: 'https://assets.stickpng.com/thumbs/58406746657b0e0e08612e45.png',
             url: 'https://www.youtube.com/watch?v=WjOk3CjTbGo&ab_channel=IztvNetwork',
-            alt: 'logo'
+            alt: 'logo0'
         },
         {
-            id: Math.floor(Math.random()*10000),
+            id: 1,
             logo: 'https://assets.stickpng.com/thumbs/58406746657b0e0e08612e45.png',
             url: 'https://www.youtube.com/watch?v=WjOk3CjTbGo&ab_channel=IztvNetwork',
-            alt: 'logo'
+            alt: 'logo1'
         },
         {
-            id: Math.floor(Math.random()*10000),
+            id: 2,
             logo: 'https://assets.stickpng.com/thumbs/58406746657b0e0e08612e45.png',
             url: 'https://www.youtube.com/watch?v=WjOk3CjTbGo&ab_channel=IztvNetwork',
-            alt: 'logo'
+            alt: 'logo2'
         },
         {
-            id: Math.floor(Math.random()*10000),
+            id: 3,
             logo: 'https://assets.stickpng.com/thumbs/58406746657b0e0e08612e45.png',
             url: 'https://www.youtube.com/watch?v=WjOk3CjTbGo&ab_channel=IztvNetwork',
-            alt: 'logo'
+            alt: 'logo3'
         },
         {
-            id: Math.floor(Math.random()*10000),
+            id: 4,
             logo: 'https://assets.stickpng.com/thumbs/58406746657b0e0e08612e45.png',
             url: 'https://www.youtube.com/watch?v=WjOk3CjTbGo&ab_channel=IztvNetwork',
-            alt: 'logo'
+            alt: 'logo4'
         },
         {
-            id: Math.floor(Math.random()*10000),
+            id: 5,
             logo: 'https://assets.stickpng.com/thumbs/58406746657b0e0e08612e45.png',
             url: 'https://www.youtube.com/watch?v=WjOk3CjTbGo&ab_channel=IztvNetwork',
-            alt: 'logo'
-        }
-    ];
+            alt: 'logo5'
+        },
+        {
+            id: 6,
+            logo: 'https://assets.stickpng.com/thumbs/58406746657b0e0e08612e45.png',
+            url: 'https://www.youtube.com/watch?v=WjOk3CjTbGo&ab_channel=IztvNetwork',
+            alt: 'logo6'
+        },
+        {
+            id: 7,
+            logo: 'https://assets.stickpng.com/thumbs/58406746657b0e0e08612e45.png',
+            url: 'https://www.youtube.com/watch?v=WjOk3CjTbGo&ab_channel=IztvNetwork',
+            alt: 'logo7'
+        },
+    ]);
 
-    const reducer = (action) => {
+    const [movedFrom, setMovedFrom] = useState('left');
+
+    const reducer = produce((action) => {
         switch (action) {
             case 'increase':
-                if(data.length>itemIndex) {
-                    setItemIndex((prev) => prev + 1);
-                    console.log('added')
-                }
-                else {
-                    setItemIndex(0)
-                }
-                console.log('+')       
+                setMovedFrom('left');
+                setData((prev) => {
+                    const lastElem = prev[prev.length-1]
+                    const rest = prev.slice(0, prev.length-1);
+                    return [lastElem, ...rest];
+                })
                 break;
             case 'decrease':
-                if(itemIndex > 1) {
-                    setItemIndex((prev) => prev - 1);
-                }
-                else {
-                    setItemIndex(data.length-1);
-                }
-                console.log('-')
+                setMovedFrom('right');
+                setData((prev) => {
+                    const firstElem = prev[0];
+                    const rest = prev.slice(1);
+                    return [...rest, firstElem];
+                })
                 break;
             default:
                 break;
         }
-    }
+    })
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -82,18 +92,18 @@ const PartnerList = ({timeInterval}) => {
         return () => {
             clearInterval(interval)
         }
-    },[itemIndex]);
+    },[data]);
 
-    console.log(`render the partnerList ${itemIndex}`);
+    console.log(`render the partnerList`);
     return (
         <>
         <div className = 'listWrapper' >
             <div className = 'leftArrow' onClick = {() => reducer('decrease')} >
                 <button className = 'controller' ></button>
             </div>
-            <div className = {`list center`}  >
+            <div className = {`list`}  >
                 {data.map((item,index) => {
-                    return <Partner {...item} key = {item.id} index = {index} />
+                    return <Partner {...item} key = {item.id} index = {index} movedFrom = {movedFrom}/>
                 })}
             </div>
             <div className = 'rightArrow' onClick = {() => reducer('increase')} >
