@@ -15,7 +15,7 @@ const Navbar = () => {
             <div className = 'NavInner' >
                 {/* logo */}
                 <Link to = '/' className = 'LogoOuter' >
-                    <img className = 'LogoImg'  src = {logo} ></img>
+                    <img className = 'LogoImg'  src = {logo} alt = 'logo' ></img>
                 </Link>
                 {/* menu elements */}
                 <div className = {isSideMenuActive?'MenuOutterActive':'MenuOutter'} >

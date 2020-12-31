@@ -9,17 +9,20 @@ const Footer = () => {
             {
                 socialNetwork: 'facebook',
                 link: 'https://www.facebook.com/',
-                imageUrl: 'https://seeklogo.com/images/F/facebook-icon-circle-logo-09F32F61FF-seeklogo.com.png'
+                imageUrl: 'https://seeklogo.com/images/F/facebook-icon-circle-logo-09F32F61FF-seeklogo.com.png',
+                id: 'facebook'
             },
             {
                 socialNetwork: 'instagram',
                 link: 'https://www.instagram.com/',
-                imageUrl: 'https://www.catholiccharitiesdc.org/wp-content/uploads/2018/10/instagram-colourful-icon.png'
+                imageUrl: 'https://www.catholiccharitiesdc.org/wp-content/uploads/2018/10/instagram-colourful-icon.png',
+                id: 'instagram'
             },
             {
                 socialNetwork: 'twitter',
                 link: 'https://twitter.com/?lang=en',
-                imageUrl: 'https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/twitter_circle-512.png'
+                imageUrl: 'https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/twitter_circle-512.png',
+                id: 'twitter'
             }
         ]
     }
@@ -30,8 +33,8 @@ const Footer = () => {
                 <div className = 'followUsCont'>
                     <div className = 'followUsText' > Follow Us </div>
                     <div className = 'icons' >
-                        {data.socialLinks.map((item, index) => {
-                                return <a className = 'linkExternal' target = '_blank' href = {item.link}><img className = 'linkImg' src = {item.imageUrl} alt = {item.socialNetwork}/></a>
+                        {data.socialLinks.map((item) => {
+                                return <a key = {item.id} className = 'linkExternal' target = '_blank' rel="noopener noreferrer" href = {item.link}><img className = 'linkImg' src = {item.imageUrl} alt = {item.socialNetwork}/></a>
                         })}
                     </div>                   
                 </div>
@@ -41,7 +44,7 @@ const Footer = () => {
                     <div className = 'emailBtn' >send</div>
                 </div>
                 <div className = 'arrowUp' onClick = {() => window.scrollTo(0,0)}>
-                    <img className = 'arrowUpImg'  src = 'https://www.freeiconspng.com/uploads/black-circle-arrow-up-icon-31.png'/>
+                    <img className = 'arrowUpImg' alt = 'arrow pointing upwards' src = 'https://www.freeiconspng.com/uploads/black-circle-arrow-up-icon-31.png'/>
                 </div>
             </div>
             <div className = 'bottomCont' >

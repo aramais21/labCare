@@ -1,5 +1,4 @@
 import React, {useState, useEffect, memo} from 'react';
-import {useHistory} from 'react-router-dom';
 import {isEqual} from 'lodash';
 import {produce} from 'immer';
 
@@ -8,7 +7,6 @@ import Partner from './Partner.js';
 import '../Css/Components/PartnerList.css';
 
 const PartnerList = ({timeInterval}) => {
-    const history = useHistory();    
     const [data, setData] = useState([
         {
             id: 0,
@@ -92,9 +90,8 @@ const PartnerList = ({timeInterval}) => {
         return () => {
             clearInterval(interval)
         }
-    },[data]);
+    },[data, reducer, timeInterval]);
 
-    console.log(`render the partnerList`);
     return (
         <>
         <div className = 'listWrapper' >

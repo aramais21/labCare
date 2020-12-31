@@ -14,7 +14,7 @@ const ProjectCard = ({id,name,desc,imageUrl}) => {
 
     return (
         <div className = 'main' onClick = {() => {goTo(`/project/${id}`,history)}} >
-            <img className = 'img'  src = {imageUrl} ></img>
+            <img className = 'img'  src = {imageUrl} alt = 'lab' ></img>
             <div className = 'infoCont' >
                 <div className = 'info' >
                     <div className = 'name' > {name} </div>

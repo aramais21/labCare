@@ -15,7 +15,7 @@
 .followUsCont {
     min-width: 18.75rem;
     max-width: 22rem;
-    margin-top: 2rem;
+    margin: 2rem 1rem 0 0;
 }
 .followUsText {
     color: #ffffff;
@@ -48,7 +48,6 @@
 }
 .emailCollector {
     min-width: 18.75rem;
-    padding-left: 1rem;
     margin-top: 2rem;
 }
 .emailText {

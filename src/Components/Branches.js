@@ -1,34 +1,25 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-// Components
 import Branch from './Branch';
 
-// Css
 import '../Css/Components/Branches.css'
 
-// Images
 import yeast from '../assets/yeast.png';
 import mining from '../assets/mining.png';
 import training from '../assets/training.png';
 import equipment from '../assets/equipment.png';
 
 const Branches = () => {
-    const [data, setData] = useState([
-        { image: yeast, text: 'Yeast and Yeast derivatives'},
-        { image: equipment, text: 'Yeast and Yeast derivatives'},
-        { image: yeast, text: 'Yeast and Yeast derivatives'},
-        { image: yeast, text: 'Yeast and Yeast derivatives'},
-    ])
     return (
         <div className = 'ImgCont' >
             <div className = 'ImgContInfo' >
                 <p className = 'ImgContWelcome' >Welcome to LabCare</p>
                 <p className = 'ImgContMoto' > lab and mining related stuff</p>
                 <div className = 'ImgContBranches' >
-                    <Branch src = {yeast} text = 'Yeast and Yeast derivatives' ></Branch>
-                    <Branch src = {equipment} text = 'Laboratory equipment and consumables' ></Branch>
-                    <Branch src = {mining} text = 'Mining and exploration' ></Branch>
-                    <Branch src = {training} text = 'Trainings and consultancy' ></Branch>
+                    <Branch src = {yeast} text = 'Yeast and Yeast derivatives' alt = 'icon' ></Branch>
+                    <Branch src = {equipment} text = 'Laboratory equipment and consumables' alt = 'icon' ></Branch>
+                    <Branch src = {mining} text = 'Mining and exploration' alt = 'icon' ></Branch>
+                    <Branch src = {training} text = 'Trainings and consultancy' alt = 'icon' ></Branch>
                 </div>
             </div>
         </div>
