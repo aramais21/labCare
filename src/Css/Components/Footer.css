@@ -3,12 +3,11 @@
     min-height: 15rem;
     background-color: #1a1a1a;
     display: flex;
-    justify-content: center;
+    align-items: center;
     flex-flow: column nowrap;
 }
 .topCont {
-    width: 100%;
-    align-self: flex-start;
+    width: 90%;
     display: flex;
     flex-flow: row wrap;
     position: relative;
@@ -17,7 +16,6 @@
     min-width: 18.75rem;
     max-width: 22rem;
     margin-top: 2rem;
-    padding-left: 1rem;
 }
 .followUsText {
     color: #ffffff;
@@ -26,10 +24,6 @@
     text-transform: uppercase;
     font-weight: 700;
     height: fit-content;
-}
-.bottomCont {
-    width: 90%;
-    border-top: 0.25rem solid #000000;
 }
 .icons {
     width: 100%;
@@ -72,7 +66,6 @@
     margin: 1rem auto;
     outline: none;
     font-size: 2rem;
-    text-transform: uppercase;
     padding-left: 0.625rem;
 }
 .emailCollector::placeholder {
@@ -98,14 +91,36 @@
     background-color: #1aa55d;
     border-radius: 100%;
     position: absolute;
-    right: 0.5rem;
+    right: 0;
     top: 0.5rem;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 .arrowUpImg {
     width: 110%;
     height: 110%;
+}
+.bottomCont {
+    width: 90%;
+    height: 2.5rem;
+    border-top: 0.25rem solid #000000;
+    margin: 2rem 0 0; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.rightsCont {
+    color: #ffffff;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-family: 'CenturyGothic';
+}
+.mention {
+    color: #4d4d4d;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-family: 'CenturyGothic';
 }

@@ -37,12 +37,16 @@ const Footer = () => {
                 </div>
                 <div className = 'emailCollector' >
                     <div className = 'emailText' >subscribe to our news letter</div>
-                    <input className = 'emailInput' placeholder = 'email' ></input>
+                    <input className = 'emailInput' placeholder = 'EMAIL' ></input>
                     <div className = 'emailBtn' >send</div>
                 </div>
-                <div className = 'arrowUp' >
+                <div className = 'arrowUp' onClick = {() => window.scrollTo(0,0)}>
                     <img className = 'arrowUpImg'  src = 'https://www.freeiconspng.com/uploads/black-circle-arrow-up-icon-31.png'/>
                 </div>
+            </div>
+            <div className = 'bottomCont' >
+                <div className = 'rightsCont' >@2021 LabCare Ltd - | all rights reserved</div>
+                <div className = 'mention' >created by aramaisay</div>
             </div>
         </div>
     )
