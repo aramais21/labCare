@@ -49,3 +49,7 @@ body {
   font-family: 'CenturyGothic';
   src: local('CenturyGothic'), url(../fonts/Century_Gothic.ttf) format('truetype');
 }
+@font-face {
+  font-family: 'CenturyGothicBold';
+  src: local('CenturyGothicBold'), url(../fonts/Century_Gothic_Bold.ttf) format('truetype');
+}

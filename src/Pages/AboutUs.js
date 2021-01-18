@@ -1,9 +1,13 @@
 import React from 'react';
 
+import WhoWeAre from '../Components/WhoWeAre.js';
+
+import '../Css/Pages/AboutUs.css';
+
 const AboutUs = () => {
     return(
-        <div>
-            AboutUs
+        <div className = 'AboutMain'>
+            <WhoWeAre/>
         </div>
     )
 }

@@ -1,0 +1,90 @@
+.whoWeAreMain {
+    position: relative;
+    min-height: 50.25rem;
+    background-color:#080405;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 3.3125rem;
+    background-image: url('../../assets/microscopicStone.jpg');
+}
+.leftTopImg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+}
+.wrapper {
+    max-width: 80rem;
+    min-height: 50.25rem;
+    margin: 0 auto;
+    z-index: 1;
+
+}
+.mainText {
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    font-size: 4.5rem;
+    line-height: 4.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: 'CenturyGothicBold';
+}
+.secondaryText {
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    opacity: 80%;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    text-transform: uppercase;
+    font-family: 'CenturyGothic';
+}
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    margin-top: 2rem;
+}
+.textWrapper {
+    width: 18.75rem;
+}
+.heading {
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 200;
+    color: #ffffff;
+    font-size: 1.375rem;
+    font-family: 'CenturyGothicBold';
+}
+.paragrah {
+    margin-top: 1rem;
+    width: 100%;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #ffffff;
+    opacity: 80%;
+    font-family: 'CenturyGothic';
+}
+.imgWrapper {
+    width: 18.75rem;
+    height: 18.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.iconImg {
+    width: 80%;
+    height: 80%;
+}
+@media (max-width: 616px) {
+    .container {
+        justify-content: center;
+    }
+}
