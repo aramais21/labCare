@@ -2,11 +2,11 @@ import React from 'react';
 import {useHistory} from 'react-router-dom';
 
 // Components
-import ProjectCard from './ProjectCard';
-import Button from './Button';
+import ProjectCard from '../ProjectCard';
+import Button from '../../../../components/Button';
 
 // Css
-import '../Css/Components/ProjectsList.css';
+import './style.css';
 
 const ProjectsList = () => {
     const history = useHistory();

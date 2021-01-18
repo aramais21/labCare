@@ -1,14 +1,14 @@
 import React from 'react';
 
 // Components
-import Branches from '../Components/Branches';
-import ProjectsList from '../Components/ProjectsList';
-import SectionDeviderText from '../Components/SectionDeviderText';
-import SectionDeviderImage from '../Components/SectionDeviderImage';
-import PartnerList from '../Components/PartnerList';
+import Branches from './components/Branches';
+import ProjectsList from './components/ProjectsList';
+import SectionDeviderText from '../../components/SectionDeviderText';
+import SectionDeviderImage from '../../components/SectionDeviderImage';
+import PartnerList from './components/PartnerList';
 
 // Css
-import '../Css/Pages/Home.css'
+import './style.css';
 
 const Home = () => {
 

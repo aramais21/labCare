@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../Css/Components/WhoWeAre.css';
+import './style.css';
 
 const WhoWeAre = () => {
     return(

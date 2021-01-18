@@ -3,10 +3,10 @@ import {useHistory} from 'react-router-dom';
 import {useSelector} from 'react-redux';
 
 // Selector
-import {goToSelector} from '../redux/selectors/index'
+import {goToSelector} from '../../../../redux/selectors'
 
 // Css
-import  '../Css/Components/ProjectCard.css'
+import './style.css';
 
 const ProjectCard = ({id,name,desc,imageUrl}) => {
     const history = useHistory();

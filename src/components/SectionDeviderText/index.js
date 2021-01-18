@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Css
-import '../Css/Components/SectionDeviderText.css'
+import './style.css';
 
 const SectionDevider = ({text, color}) => {
     return (

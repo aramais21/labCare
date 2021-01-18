@@ -2,7 +2,7 @@ import React from 'react';
 import {NavLink} from 'react-router-dom';
 
 // Css
-import '../Css/Components/MenuItem.css';
+import './style.css';
 
 const MenuItem = ({to, name}) => {
     return(

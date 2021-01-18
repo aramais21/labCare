@@ -2,9 +2,9 @@ import React, {useState, useEffect, memo} from 'react';
 import {isEqual} from 'lodash';
 import {produce} from 'immer';
 
-import Partner from './Partner.js';
+import Partner from '../Partner';
 
-import '../Css/Components/PartnerList.css';
+import './style.css';
 
 const PartnerList = ({timeInterval}) => {
     const [data, setData] = useState([

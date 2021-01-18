@@ -1,13 +1,13 @@
 import React from 'react';
 
-import Branch from './Branch';
+import Branch from '../Branch';
 
-import '../Css/Components/Branches.css'
+import './style.css';
 
-import yeast from '../assets/yeast.png';
-import mining from '../assets/mining.png';
-import training from '../assets/training.png';
-import equipment from '../assets/equipment.png';
+import yeast from '../../../../assets/yeast.png';
+import mining from '../../../../assets/mining.png';
+import training from '../../../../assets/training.png';
+import equipment from '../../../../assets/equipment.png';
 
 const Branches = () => {
     return (

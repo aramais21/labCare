@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../Css/Components/Partner.css';
+import './style.css';
 
 const Partner = ({logo, url, alt, id, movedFrom}) => {
     return (

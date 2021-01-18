@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Css
-import '../Css/Components/Branch.css'
+import './style.css';
 
 const Branch = ({src, text, alt}) => {
     return (

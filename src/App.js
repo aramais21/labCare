@@ -3,23 +3,23 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import {Provider} from 'react-redux';
 
 // Redux
-import store from './redux/store/index'; 
+import store from './redux/store'; 
 
 // Pages 
-import Home from './Pages/Home';
-import AboutUs from './Pages/AboutUs';
-import Services from './Pages/Services';
-import Products from './Pages/Products';
-import Product from './Pages/Product';
-import Projects from './Pages/Projects';
-import Project from './Pages/Project';
+import Home from './pages/Home';
+import AboutUs from './pages/AboutUs';
+import Services from './pages/Services';
+import Products from './pages/Products';
+import Product from './pages/Product';
+import Projects from './pages/Projects';
+import Project from './pages/Project';
 
 // Components
-import Navbar from './Components/Navbar';
-import Footer from './Components/Footer';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 // Css
-import './Css/App.css';
+import './App.css';
 
 function App() {
   return (

@@ -1,8 +1,8 @@
 import React from 'react';
 
-import WhoWeAre from '../Components/WhoWeAre.js';
+import WhoWeAre from './components/WhoWeAre/index';
 
-import '../Css/Pages/AboutUs.css';
+import './style.css';
 
 const AboutUs = () => {
     return(

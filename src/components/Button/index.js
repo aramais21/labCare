@@ -2,10 +2,10 @@ import React from 'react';
 import {useSelector} from 'react-redux';
 
 // Selector
-import {goToSelector} from '../redux/selectors';
+import {goToSelector} from '../../redux/selectors';
 
 // Css
-import '../Css/Components/Button.css';
+import './style.css';
 
 const ShowMoreBtn = ({text, path, color, history}) => {
     const goTo = useSelector(goToSelector);

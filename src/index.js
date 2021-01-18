@@ -7,7 +7,7 @@ import * as serviceWorker from './serviceWorker';
 import './fonts/Century_Gothic.ttf';
 
 // Css
-import './Css/index.css';
+import './index.css';
 
 ReactDOM.render(
   <React.StrictMode>

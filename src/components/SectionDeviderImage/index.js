@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../Css/Components/SectionDeviderImage.css'
+import './style.css';
 
 const SectionDeviderImage = () => {
     return(
