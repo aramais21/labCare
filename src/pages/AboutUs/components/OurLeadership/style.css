@@ -45,3 +45,11 @@
     font-size: 1.2rem;
     margin-top: 1rem;
 }
+@media (max-width: 950px) {
+    .ourLeadWrapper {  
+        justify-content: space-around;
+    }
+    .ourLead {
+        margin-bottom: 2rem;
+    }
+}
