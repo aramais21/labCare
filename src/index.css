@@ -57,3 +57,7 @@ body {
   font-family: 'MyriadPro';
   src: local('MyriadPro'), url(./fonts/Myriad_Pro.OTF) format('opentype');
 }
+@font-face {
+  font-family: 'MyriadProBold';
+  src: local('MyriadProBold'), url(./fonts/Myriad_Pro_Bold.OTF) format('opentype');
+}

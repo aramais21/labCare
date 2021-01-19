@@ -1,0 +1,59 @@
+.ourLocMain {
+    min-height: 50.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.locWrapper {
+    flex: 1 1 auto;
+    display: flex;
+    max-width: 80rem;
+    width: 100%;
+    flex-flow: row wrap;
+    margin-top: 2rem;
+    justify-content: center;
+}
+.locCont {
+    width: 50%;
+    display: flex;
+    flex-flow: row nowrap;
+    min-width: 18.75rem;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 6rem;
+}
+.locFrame {
+    width: 18.75rem;
+    height: 18.75rem;
+}
+.locInfo {
+    height: 18.75rem;
+    display: flex;
+    flex-flow: column nowrap;
+    padding-left: 2rem;
+}
+.locText {
+    font-size: 2rem;
+    text-transform: capitalize;
+    color: #000000;
+    font-family: 'MyriadProBold';
+}
+.locDesc {
+    font-size: 1.33rem;
+    color: #000000;
+    font-family: 'MyriadProBold';
+    margin-top: 2rem;
+    opacity: 80%;
+}
+.locInfoRight {
+    height: auto;
+}
+@media (max-width: 950px) {
+    .locCont {
+        flex-flow: row wrap;
+    }
+    .locInfo {
+        padding-left: 0;
+        margin-top: 2rem;
+    }
+}
