@@ -1,27 +1,33 @@
 .whoWeAreMain {
     position: relative;
     min-height: 50.25rem;
-    background-color:#080405;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color:#000000;
     padding-top: 3.3125rem;
-    background-image: url('../../../../assets/microscopicStone.jpg');
+    overflow: hidden;
 }
-.leftTopImg {
+.mineralImg {
     position: absolute;
     left: 0;
-    top: 0;
-    width: 100%;
-    z-index: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;    
+    margin: auto;
+    width: 50%;
 }
 .wrapper {
     max-width: 80rem;
     min-height: 50.25rem;
-    margin: 0 auto;
+    margin: auto;
     z-index: 1;
-
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
 }
 .mainText {
     width: 100%;

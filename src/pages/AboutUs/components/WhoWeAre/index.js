@@ -1,10 +1,12 @@
 import React from 'react';
 
+import mineral from '../../../../assets/mineral.jpg'
 import './style.css';
 
 const WhoWeAre = () => {
     return(
         <div className = 'whoWeAreMain'>
+            <img src = {mineral} className = 'mineralImg' />
             <div className = 'wrapper'>
                 <div className = 'mainText'>we are labcare</div>
                 <div className = 'secondaryText'>texttexttexttexttexttexttext</div>
