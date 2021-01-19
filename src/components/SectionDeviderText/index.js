@@ -5,9 +5,9 @@ import './style.css';
 
 const SectionDevider = ({text, color}) => {
     return (
-        <div className = 'cont' >
-            <div className = {`text ${color}`} > {text} </div>
-            <div className = 'devider' ></div>
+        <div className = 'cont'>
+            <div className = {`text ${color}Text`} > {text} </div>
+            <div className = {`devider ${color}Devider`} ></div>
         </div>
     )
 }

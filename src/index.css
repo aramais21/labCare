@@ -53,3 +53,7 @@ body {
   font-family: 'CenturyGothicBold';
   src: local('CenturyGothicBold'), url(./fonts/Century_Gothic_Bold.ttf) format('truetype');
 }
+@font-face {
+  font-family: 'MyriadPro';
+  src: local('MyriadPro'), url(./fonts/Myriad_Pro.OTF) format('opentype');
+}

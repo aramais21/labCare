@@ -1,0 +1,47 @@
+.ourLeadMain {
+    min-height: 50.25rem;
+    background-color: #1aa55d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ourLeadWrapper {
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 80rem;
+    /* margin: auto; */
+    width: 100%;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+.potrait {
+    width: 18.75rem;
+    height: 25rem;
+}
+.nameSurname {
+    font-size: 1.8rem;
+    color: #ffffff;
+    font-family: 'MyriadPro';
+}
+.deviderLead {
+    width: 100%;
+    height: 0.125rem;
+    background-color: #000000;
+    margin: 0.5rem 0;
+}
+.ourLead {
+    width: 18.75rem;
+}
+.proffesion {
+    font-size: 1.4rem;
+    color: #ffffff;
+    font-family:  'MyriadPro';
+    text-transform: capitalize;
+}
+.aboutLead {
+    color: #ffffff;
+    font-family:  'MyriadPro';
+    opacity: 80%;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
