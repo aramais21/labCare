@@ -8,11 +8,9 @@ import store from './redux/store';
 // Pages 
 import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
-import Services from './pages/Services';
+import Activities from './pages/Activities';
 import Products from './pages/Products';
 import Product from './pages/Product';
-import Projects from './pages/Projects';
-import Project from './pages/Project';
 
 // Components
 import Navbar from './components/Navbar';
@@ -34,8 +32,8 @@ function App() {
         <Route path = '/about'>
           <AboutUs></AboutUs>
         </Route>
-        <Route path = '/services'>
-          <Services/>
+        <Route path = '/activities'>
+          <Activities/>
         </Route>
         <Route path = '/products'>
           <Products/>
@@ -43,11 +41,8 @@ function App() {
         <Route path = '/product/:id'>
           <Product/>
         </Route>
-        <Route path = '/projects'>
-          <Projects/>
-        </Route>
-        <Route path = '/project/:id'>
-          <Project/>
+        <Route path = '/contacts' >
+          <></>
         </Route>
       </Switch>
 
