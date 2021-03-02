@@ -1,31 +1,12 @@
 import React from 'react';
+import {useSelector} from 'react-redux';
+
+import {socLinksSelector} from '../../redux/selectors';
 
 import './style.css';
 
 const Footer = () => {
-
-    const data = {
-        socialLinks: [
-            {
-                socialNetwork: 'facebook',
-                link: 'https://www.facebook.com/',
-                imageUrl: 'https://seeklogo.com/images/F/facebook-icon-circle-logo-09F32F61FF-seeklogo.com.png',
-                id: 'facebook'
-            },
-            {
-                socialNetwork: 'instagram',
-                link: 'https://www.instagram.com/',
-                imageUrl: 'https://www.catholiccharitiesdc.org/wp-content/uploads/2018/10/instagram-colourful-icon.png',
-                id: 'instagram'
-            },
-            {
-                socialNetwork: 'twitter',
-                link: 'https://twitter.com/?lang=en',
-                imageUrl: 'https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/twitter_circle-512.png',
-                id: 'twitter'
-            }
-        ]
-    }
+    const socLinks = useSelector(socLinksSelector);
 
     return(
         <div className = 'footerWrapper' >
@@ -33,7 +14,7 @@ const Footer = () => {
                 <div className = 'followUsCont'>
                     <div className = 'followUsText' > Follow Us </div>
                     <div className = 'icons' >
-                        {data.socialLinks.map((item) => {
+                        {socLinks.map((item) => {
                                 return <a key = {item.id} className = 'linkExternal' target = '_blank' rel="noopener noreferrer" href = {item.link}><img className = 'linkImg' src = {item.imageUrl} alt = {item.socialNetwork}/></a>
                         })}
                     </div>                   
