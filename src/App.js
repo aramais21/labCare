@@ -23,6 +23,7 @@ function App() {
   return (
     <Provider store = {store} >
     <Router>
+      {/* height of Navbar 5.625rem */}
       <Navbar></Navbar>
 
       <Switch>
