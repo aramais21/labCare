@@ -1,13 +1,30 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import './style.css';
 
-const Layout = ({children}) => {
+const Layout = ({children, background}) => {
     return(
-        <div className = 'layout' >
+        <LayoutDiv background={background}>
             {children}
-        </div>
+        </LayoutDiv>
     )
 }
+
+const LayoutDiv = styled.div`
+    width: 100vw;
+    min-height: 100vh;
+    position: relative;
+    overflow-x:hidden;
+    ${props => {
+        if(props?.background === 'green') {
+            return 'background-color: #1aa45d;';
+        }
+        else if (props.background === 'orange') {
+            return 'background-color: #e57424';
+        }
+        return '';
+    }}
+`
 
 export default Layout;

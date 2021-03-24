@@ -6,6 +6,7 @@ import ProjectsList from './components/ProjectsList';
 import SectionDeviderText from '../../components/SectionDeviderText';
 import SectionDeviderImage from '../../components/SectionDeviderImage';
 import Slider from '../../components/Slider';
+import OurActivities from '../../components/OurActivities';
 import PartnerList from './components/PartnerList';
 
 // Css
@@ -17,8 +18,11 @@ const Home = () => {
         <div className = 'HomeMain' >
             {/* <Branches/> */}
             <Slider />
-            <SectionDeviderText text = {'Our projects'} color = {'orange'} />
-            <ProjectsList/>
+            <OurActivities />
+
+            {/* <SectionDeviderText text = {'Our projects'} color = {'orange'} /> */}
+
+            {/* <ProjectsList/> */}
             <SectionDeviderImage />
             <SectionDeviderText text =  {'Our partners'} color = {'green'} />
             <PartnerList timeInterval = {5000}/>
