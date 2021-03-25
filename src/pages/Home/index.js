@@ -16,9 +16,8 @@ const Home = () => {
         <div className = 'HomeMain' >
             <Slider />
             <OurActivities />
-            {/* <ProjectsList/> */}
-            <SectionDeviderImage />
-            <SectionDeviderText text =  {'Our partners'} color = {'green'} />
+            <SectionDeviderImage text = 'Quality, trust and experience' />
+            <SectionDeviderText text =  'Our partners' color = 'green' />
             <PartnerList timeInterval = {5000}/>
         </div>
     )
