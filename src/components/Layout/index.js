@@ -18,7 +18,7 @@ const LayoutDiv = styled.div`
     overflow-x:hidden;
     ${props => {
         if(props?.background === 'green') {
-            return 'background-color: #1aa45d;';
+            return 'background-color: #1aa55d;';
         }
         else if (props.background === 'orange') {
             return 'background-color: #e57424';

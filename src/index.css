@@ -30,3 +30,19 @@ body {
   font-family: 'MyriadProBold';
   src: local('MyriadProBold'), url(./fonts/Myriad_Pro_Bold.OTF) format('opentype');
 }
+@font-face {
+  font-family: 'SegoeUI';
+  src: local('SegoeUI'), url(./fonts/Segoe_UI.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'SegoeUIBold';
+  src: local('SegoeUIBold'), url(./fonts/Segoe_UI_Bold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'SegoeUIItalic';
+  src: local('SegoeUIItalic'), url(./fonts/Segoe_UI_Italic.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'SegoeUIItalicBold';
+  src: local('SegoeUIItalicBold'), url(./fonts/Segoe_UI_Bold_Italic.ttf) format('truetype');
+}

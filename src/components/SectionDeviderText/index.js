@@ -1,14 +1,20 @@
 import React from 'react';
 
 // Css
-import './style.css';
+import {Wrapper, InnerCont, MainText, Devider, SecondaryText} from './style.js';
 
-const SectionDevider = ({text, color}) => {
+const SectionDevider = ({text, backgroundColor, textColor, secondaryText}) => {
     return (
-        <div className = 'cont'>
-            <div className = {`text ${color}Text`} > {text} </div>
-            <div className = {`devider ${color}Devider`} ></div>
-        </div>
+        <Wrapper backgroundColor = {backgroundColor} >
+            <InnerCont>
+                <MainText backgroundColor = {backgroundColor} color = {textColor} > {text} </MainText>
+                <Devider backgroundColor = {textColor}></Devider>
+            </InnerCont>
+            {secondaryText?
+                <SecondaryText color = {textColor} >{secondaryText}</SecondaryText>
+            :
+                null}
+        </Wrapper>
     )
 }
 
