@@ -2,11 +2,12 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
     width: 100%;
-    height: 10rem;
+    min-height: 10rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: ${({backgroundColor}) => backgroundColor}
+    background-color: ${({backgroundColor}) => backgroundColor};
+    margin: 32px 0;
 `
 
 export const InnerCont = styled.div`
@@ -32,6 +33,7 @@ export const MainText = styled.div`
     padding: 0 2rem;
     background-color: ${({backgroundColor}) => backgroundColor } ;
     color: ${({color}) => color};
+    text-align: center;
 `;
 
 export const Devider = styled.div`
