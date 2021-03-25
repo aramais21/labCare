@@ -1,8 +1,6 @@
 import React from 'react';
 
 // Components
-import Branches from './components/Branches';
-import ProjectsList from './components/ProjectsList';
 import SectionDeviderText from '../../components/SectionDeviderText';
 import SectionDeviderImage from '../../components/SectionDeviderImage';
 import Slider from '../../components/Slider';
@@ -16,12 +14,8 @@ const Home = () => {
 
     return(
         <div className = 'HomeMain' >
-            {/* <Branches/> */}
             <Slider />
             <OurActivities />
-
-            {/* <SectionDeviderText text = {'Our projects'} color = {'orange'} /> */}
-
             {/* <ProjectsList/> */}
             <SectionDeviderImage />
             <SectionDeviderText text =  {'Our partners'} color = {'green'} />

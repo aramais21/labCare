@@ -12,7 +12,7 @@ const SliderContent = ({slides, dispatch, currIndex}) => {
             dispatch({type: 'forward'});
         }, 2000);
         return () => clearInterval(interval)
-    },[])
+    },[dispatch])
 
     return (
         <SliderCont currIndex={currIndex}>
