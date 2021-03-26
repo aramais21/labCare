@@ -23,9 +23,9 @@ export const ActivityCardWrapper = styled.div`
 `;
 
 export const ActivityIconCont = styled.div`
-    width: 143px;
-    height: 143px;
-    border-radius: 100px;
+    min-width: 143px;
+    min-height: 143px;
+    border-radius: 100%;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
     flex-direction: column;
     align-items: center;
     background-color: ${({backgroundColor}) => backgroundColor};
-    margin: 32px 0;
+    margin: 94px 0;
 `
 
 export const InnerCont = styled.div`
@@ -34,6 +34,7 @@ export const MainText = styled.div`
     background-color: ${({backgroundColor}) => backgroundColor } ;
     color: ${({color}) => color};
     text-align: center;
+    text-transform: uppercase;
 `;
 
 export const Devider = styled.div`

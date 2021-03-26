@@ -1,11 +1,10 @@
 import React from 'react';
 
 // Components
-import SectionDeviderText from '../../components/SectionDeviderText';
 import SectionDeviderImage from '../../components/SectionDeviderImage';
 import Slider from '../../components/Slider';
 import OurActivities from '../../components/OurActivities';
-import PartnerList from './components/PartnerList';
+import OurPartners from '../../components/OurPartners';
 
 // Css
 import './style.css';
@@ -17,8 +16,7 @@ const Home = () => {
             <Slider />
             <OurActivities />
             <SectionDeviderImage text = 'Quality, trust and experience' />
-            <SectionDeviderText text =  'Our partners' color = 'green' />
-            <PartnerList timeInterval = {5000}/>
+            <OurPartners />
         </div>
     )
 }

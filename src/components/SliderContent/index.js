@@ -8,10 +8,9 @@ import './style.css';
 const SliderContent = ({slides, dispatch, currIndex}) => {
     useEffect(() => {
         const interval = setInterval(() => {
-            console.log('changed');
             dispatch({type: 'forward'});
         }, 2000);
-        return () => clearInterval(interval)
+        return () => clearInterval(interval);
     },[dispatch])
 
     return (
