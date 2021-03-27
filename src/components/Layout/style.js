@@ -3,7 +3,12 @@ import { WHITE_HEX } from '../../config/constants';
 
 export const LayoutDiv = styled.div`
     width: 100vw;
-    min-height: 100vh;
+    ${props => {
+        if(props.fixedHeight) {
+            return `height: ${props.fixedHeight}px;`
+        }
+        return 'min-height: 100vh;'
+    }}
     position: relative;
     overflow-x:hidden;
     background-color: ${props => {

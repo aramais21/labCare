@@ -19,7 +19,7 @@ export const ActivityCardWrapper = styled.div`
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    margin-bottom: 16px;
+    margin-bottom: 124px;
 `;
 
 export const ActivityIconCont = styled.div`
@@ -53,7 +53,7 @@ export const ActivityCardText = styled.div`
     font-family: ${CENTURY_GOTHIC_BOLD};
     font-weight: 700;
     line-height: 1.2;
-    margin-top: 80px;
+    margin-top: 74px;
     text-align: center;
 `;
 

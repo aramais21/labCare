@@ -4,10 +4,6 @@ import OurStrategy from '../../components/OurStrategy';
 
 import Slider from '../../components/Slider';
 
-// import WhoWeAre from './components/WhoWeAre';
-// import OurLeadership from './components/OurLeadership';
-// import OurLocations from './components/OurLocations';
-
 import {AboutWrapper} from './style';
 
 const AboutUs = () => {

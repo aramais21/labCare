@@ -23,4 +23,5 @@ export const Image = styled.div`
     min-height: ${props => props.minHeight}px;
     width: 100%;
     height: 100%;
+    margin: 33.5px 0;
 `;

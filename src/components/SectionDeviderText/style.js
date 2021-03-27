@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
     flex-direction: column;
     align-items: center;
     background-color: ${({backgroundColor}) => backgroundColor};
-    margin: 94px 0;
+    margin: 94px 0 ${props => props.noMarginBottom?'0':''};
 `
 
 export const InnerCont = styled.div`

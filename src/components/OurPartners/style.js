@@ -11,6 +11,14 @@ export const PartnerWrapper = styled.div`
     position: relative;
 `;
 
+export const ArrowWrapper = styled.div`
+    padding: ${props => props.direction==='left'?'0 50px 0 0':'0 0 0 50px'} ;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`;
+
 export const Arrow = styled.div`
     width: 45px;
     height: 45px;
@@ -24,6 +32,7 @@ export const PartnerInner = styled.div`
     position: relative;
     overflow: hidden;
     height: 196px;
+    flex-grow: 1;
 `;
 
 export const PartnerList = styled.div`

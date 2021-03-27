@@ -4,7 +4,7 @@ import { GREEEN_HEX, WHITE_HEX } from "../../config/constants";
 import Layout from "../Layout"
 import SectionDevider from '../SectionDeviderText';
 
-import {PartnerWrapper, Arrow, Partner, PartnerLogo, PartnerHover, PartnerList, PartnerInner} from './style'
+import {PartnerWrapper, Arrow, Partner, PartnerLogo, PartnerHover, PartnerList, PartnerInner, ArrowWrapper} from './style'
 
 const OurPartners = () => {
     const [data, setData] = useState([
@@ -97,10 +97,12 @@ const OurPartners = () => {
     },[dispatchActiveIndex])
 
     return (
-        <Layout background={GREEEN_HEX}>
-            <SectionDevider text='Our Partners' textColor = {WHITE_HEX} backgroundColor={GREEEN_HEX} ></SectionDevider>
+        <Layout background={GREEEN_HEX} fixedHeight  = {863}>
+            <SectionDevider text='Our Partners' textColor = {WHITE_HEX} backgroundColor={GREEEN_HEX} noMarginBottom={true}></SectionDevider>
             <PartnerWrapper>
-                <Arrow direction = 'left' onClick = {() => dispatchActiveIndex({direction: 'left'})} ></Arrow>
+                <ArrowWrapper direction = 'left'>
+                    <Arrow direction = 'left' onClick = {() => dispatchActiveIndex({direction: 'left'})} ></Arrow>
+                </ArrowWrapper>
                 <PartnerInner>
                     <PartnerList itemIndex={activeIndex}>
                         {data.map(({id, url, logo, name}) => {
@@ -113,7 +115,9 @@ const OurPartners = () => {
                         })}
                     </PartnerList>
                 </PartnerInner>
-                <Arrow direction = 'right' onClick = {() => dispatchActiveIndex({direction: 'right'})} ></Arrow>
+                <ArrowWrapper direction = 'right' >
+                    <Arrow direction = 'right' onClick = {() => dispatchActiveIndex({direction: 'right'})} ></Arrow>
+                </ArrowWrapper>
             </PartnerWrapper>
         </Layout>
     );

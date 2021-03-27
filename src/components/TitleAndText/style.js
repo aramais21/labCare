@@ -6,7 +6,8 @@ export const Wrapper = styled.div`
     min-width: 300px;
     max-width: 700px;
     display: flex;
-    flex-flow: column nowrap
+    flex-flow: column nowrap;
+    margin: 33.5px 0;
 `;
 
 export const Title = styled.div`
