@@ -1,9 +1,0 @@
-.sliderContent {
-    height: 100%;
-    display: flex;
-    flex-flow: row nowrap;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-}

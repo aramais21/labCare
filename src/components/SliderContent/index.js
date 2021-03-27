@@ -1,38 +1,36 @@
 import React, {useEffect} from 'react';
-import styled from 'styled-components';
 
 import Slide from '../Slide';
 
-import './style.css';
+import {SliderCont} from './style.js';
 
 const SliderContent = ({slides, dispatch, currIndex}) => {
     useEffect(() => {
-        const interval = setInterval(() => {
-            dispatch({type: 'forward'});
-        }, 2000);
-        return () => clearInterval(interval);
-    },[dispatch])
+        if(slides?.length>1) {
+            const interval = setInterval(() => {
+                dispatch({type: 'forward'});
+                console.log('dispatched');
+            }, 2000);
+            return () => clearInterval(interval);
+        }
+    },[dispatch, slides.length])
 
     return (
         <SliderCont currIndex={currIndex}>
-            {slides.map(({img, id}) => {
-                return (
-                    <Slide img = {img} key = {id}/>
-                );
-            })}
+            {slides?.length > 1?
+                slides.map(({img, id}) => {
+                    return (
+                        <Slide img = {img} key = {id}/>
+                    );
+                })
+            :
+                <Slide img = {slides.img} key={slides.id} />
+            }
+            {}
         </SliderCont>
     );
 }
 
-const SliderCont = styled.div`
-    height: 100%;
-    display: flex;
-    flex-flow: row nowrap;
-    position: absolute;
-    top: 0;
-    transition: 0.2s linear left;
-    left: -${props => props.currIndex*100}vw;
-    z-index: 2;
-`;
+
 
 export default SliderContent;
