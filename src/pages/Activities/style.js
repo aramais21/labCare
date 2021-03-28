@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { CENTURY_GOTHIC, MYRIAD_PRO, WHITE_HEX } from '../../config/constants';
+import { CENTURY_GOTHIC, MYRIAD_PRO } from '../../config/constants';
 
 export const ActivityWrapper = styled.div`
     width: 100%;

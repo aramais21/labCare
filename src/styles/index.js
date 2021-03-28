@@ -21,7 +21,7 @@ export const Image = styled.div`
     background-color: ${WHITE_HEX};
     min-width: ${props => props.minWidth}px;
     min-height: ${props => props.minHeight}px;
-    width: 100%;
-    height: 100%;
+    width: ${props => props.width? props.width:'100%'};
+    height: ${props => props.height? props.height:'100%'};
     ${props => !props.noMargin?'margin: 33.5px 0;':''}
 `;
