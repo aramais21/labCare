@@ -18,7 +18,7 @@ export const Image = styled.div`
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: ${WHITE_HEX};
+    background-color: ${props => props.noBackground?'none':WHITE_HEX};
     min-width: ${props => props.minWidth}px;
     min-height: ${props => props.minHeight}px;
     width: ${props => props.width? props.width:'100%'};

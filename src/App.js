@@ -18,6 +18,7 @@ import Footer from './components/Footer';
 
 // Css
 import './App.css';
+import Contacts from './pages/Contacts';
 
 function App() {
   return (
@@ -43,7 +44,7 @@ function App() {
           <Product/>
         </Route>
         <Route path = '/contacts' >
-          <></>
+          <Contacts></Contacts>
         </Route>
       </Switch>
 
