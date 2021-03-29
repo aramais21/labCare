@@ -1,5 +1,12 @@
 import styled from "styled-components";
-import { CENTURY_GOTHIC_BOLD, MYRIAD_PRO, WHITE_HEX } from "../../config/constants";
+import { CENTURY_GOTHIC_BOLD, MYRIAD_PRO, smBreakingPoint, WHITE_HEX } from "../../config/constants";
+import { fontForSmallerScreen, mediaMaxWidth } from "../../config/helpers";
+
+export const ProductWrapper = styled.div`
+    ${mediaMaxWidth(smBreakingPoint,`
+        margin-top: 5.625rem;
+    `)}
+`
 
 export const RightCont = styled.div`
     display: flex;
@@ -8,6 +15,10 @@ export const RightCont = styled.div`
     justify-content: flex-start;
     height: 100%;
     margin-top: 64px;
+    ${mediaMaxWidth(smBreakingPoint, `
+        width: 320px;
+        max-width: 320px;
+    `)}
 `;
 
 export const MainText = styled.div`
@@ -19,6 +30,10 @@ export const MainText = styled.div`
     line-height: 1.2;
     text-transform: uppercase;
     margin-left: 63px
+    ${fontForSmallerScreen(36)}
+    ${mediaMaxWidth(smBreakingPoint, `
+        margin-bottom: 32px;
+    `)}
 `;
 
 export const SecondaryText = styled.div`
@@ -27,4 +42,8 @@ export const SecondaryText = styled.div`
     font-size: 28px;
     line-height: 1.2;
     text-align: left;
+    ${fontForSmallerScreen(28)}
+    ${mediaMaxWidth(smBreakingPoint, `
+        margin-bottom: 64px;
+    `)}
 `;

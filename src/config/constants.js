@@ -16,3 +16,8 @@ export const SEGOE_UI_ITALIC_BOLD = 'SegoeUIItalicBold';
 // multiplayers
 export const smFontUnder30 = 0.8;
 export const smFontAbove30 = 0.625;
+// breakingPoints
+export const xsBreakingPoint = '360px';
+export const smBreakingPoint = '414px';
+export const mdBreakingPoint = '1366px';
+export const lgBreakingPoint = '1920px';

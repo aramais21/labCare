@@ -79,7 +79,7 @@ const Products = () => {
                     {data.map(({src, title, categories}, index) => {
                         return (
                             <MainCategoryWrapper key = {title + categories.length} onClick = {() => clickhandler(index)}>
-                                <Image src = {src} width = '80vh' height = '80vh' minHeight = {300} minWidth = {300} maxWidth = {522} maxHeight = {522}     backgroundColor = {WHITE_HEX}></Image>
+                                <Image src = {src} width = '80vh' height = '80vh' maxWidth = {522} maxHeight = {522} mobileWidth = '300px' mobileHeight = '300px'  backgroundColor = {WHITE_HEX}></Image>
                                 <MainCategoryText>{title}</MainCategoryText>
                             </MainCategoryWrapper>
                         )
@@ -101,7 +101,7 @@ const Products = () => {
                                 <Link to = {`/product/${'asd'}`}>
                                     <CategoryWrapper>
                                         <CategoryText>{title}</CategoryText>
-                                        <Image src ={src} width = '432px' height = '432px'></Image>
+                                        <Image src ={src} width = '432px' height = '432px' mobileWidth = '250px' mobileHeight = '250px'></Image>
                                     </CategoryWrapper>
                                 </Link>
                             );

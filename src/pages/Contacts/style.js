@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import { BLACK_HEX, CENTURY_GOTHIC_BOLD, GREEEN_HEX } from '../../config/constants';
+import { BLACK_HEX, CENTURY_GOTHIC_BOLD, GREEEN_HEX, smBreakingPoint } from '../../config/constants';
+import { fontForSmallerScreen, mediaMaxWidth } from '../../config/helpers';
 
 export const ContactWrapper = styled.div`
     margin-top: 3rem;
@@ -16,6 +17,10 @@ export const RightCont = styled.div`
     height: 100%;
     align-items: center;
     justify-content: space-around;
+    ${mediaMaxWidth(smBreakingPoint,`
+        width: 100%;
+        margin: 32px 0;
+    `)}
 `;
 
 export const ContactCont = styled.div`
@@ -51,6 +56,7 @@ export const ContactMainText = styled.div`
     font-family: ${CENTURY_GOTHIC_BOLD};
     font-weight: bold;
     line-heigth: 1.2;
+    ${fontForSmallerScreen(36)}
 `;
 
 export const ContactSecondText = styled.div`
@@ -59,4 +65,5 @@ export const ContactSecondText = styled.div`
     font-family: ${CENTURY_GOTHIC_BOLD};
     font-weight: bold;
     line-heigth: 1.2;
+    ${fontForSmallerScreen(24)}
 `;

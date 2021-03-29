@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { fontForSmallerScreen } from '../../config/helpers';
 
 export const Wrapper = styled.div`
     width: 100%;
@@ -35,6 +36,7 @@ export const MainText = styled.div`
     color: ${({color}) => color};
     text-align: center;
     text-transform: uppercase;
+    ${fontForSmallerScreen(80)}
 `;
 
 export const Devider = styled.div`
@@ -54,4 +56,5 @@ export const SecondaryText = styled.div`
     font-weight: bold;
     color: ${({color}) => color};
     font-family: 'SegoeUIBold';
+    ${fontForSmallerScreen(28.2)}
 `;

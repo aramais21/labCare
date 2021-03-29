@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { CENTURY_GOTHIC_BOLD, GREEEN_HEX, GREY_WHITE_HEX, WHITE_HEX } from "../../config/constants";
+import { CENTURY_GOTHIC_BOLD, GREEEN_HEX, GREY_WHITE_HEX, smBreakingPoint, WHITE_HEX } from "../../config/constants";
+import { fontForSmallerScreen, mediaMaxWidth } from "../../config/helpers";
 
 export const ActivityList = styled.div`
     width: 100%;
@@ -20,6 +21,10 @@ export const ActivityCardWrapper = styled.div`
     flex-flow: column nowrap;
     align-items: center;
     margin-bottom: 124px;
+    ${mediaMaxWidth(smBreakingPoint, `
+        width: 300px;
+        height: 550px;
+    `)}
 `;
 
 export const ActivityIconCont = styled.div`
@@ -45,6 +50,7 @@ export const ActivityCardTitle = styled.div`
     line-height: 1.2;
     text-align: center;
     margin-top: 20px;
+    ${fontForSmallerScreen(25)}
 `;
 
 export const ActivityCardText = styled.div`
@@ -55,6 +61,10 @@ export const ActivityCardText = styled.div`
     line-height: 1.2;
     margin-top: 74px;
     text-align: center;
+    ${fontForSmallerScreen(21)}
+    ${mediaMaxWidth(smBreakingPoint,`
+        margin-top: 20px;
+    `)}
 `;
 
 export const ActivityCardButton = styled.div`
@@ -71,4 +81,5 @@ export const ActivityCardButton = styled.div`
     text-decoration: none;
     text-transform: uppercase;
     margin-top: 32px;
+    ${fontForSmallerScreen(30)}
 `;

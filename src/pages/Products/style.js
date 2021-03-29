@@ -1,12 +1,14 @@
 import styled, { keyframes } from "styled-components";
-import { CENTURY_GOTHIC_BOLD, GREEEN_HEX, WHITE_HEX } from "../../config/constants";
+import { CENTURY_GOTHIC_BOLD, GREEEN_HEX, smBreakingPoint, WHITE_HEX } from "../../config/constants";
+import { fontForSmallerScreen, mediaMaxWidth } from "../../config/helpers";
 
 export const MainCategoryWrapper = styled.div`
     display: flex;
     flex-flow: column nowrap;
     min-width: 300px;
     cursor: pointer;
-    margin-bottom: 98px
+    margin-bottom: 98px;
+    align-items: center;
 `;
 
 export const MainCategoryText = styled.div`
@@ -17,6 +19,7 @@ export const MainCategoryText = styled.div`
     line-height: 1.2;
     text-align: center;
     text-transform: uppercase;
+    ${fontForSmallerScreen(36)}
 `;
 
 export const MainImageWrapper = styled.div`
@@ -44,6 +47,8 @@ export const MainImageText = styled.div`
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
+    ${fontForSmallerScreen(84)}
+    ${mediaMaxWidth(smBreakingPoint, `width: auto;`)}
 `;
 
 export const CategoryWrapper  = styled.div`
@@ -61,6 +66,7 @@ export const CategoryText = styled.div`
     line-height: 1.2;
     font-family: ${CENTURY_GOTHIC_BOLD};
     text-transform: uppercase;
+    ${fontForSmallerScreen(36)}
 `;
 
 export const ProductsWrapper = styled.div`

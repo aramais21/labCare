@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { WHITE_HEX } from "../config/constants";
+import { smBreakingPoint, WHITE_HEX } from "../config/constants";
+import { mediaMaxWidth } from "../config/helpers";
 
 export const RowFlexDiv = styled.div`
     width: 100%;
@@ -24,4 +25,8 @@ export const Image = styled.div`
     width: ${props => props.width? props.width:'100%'};
     height: ${props => props.height? props.height:'100%'};
     ${props => !props.noMargin?'margin: 33.5px 0;':''}
+    ${props => mediaMaxWidth(smBreakingPoint, `
+        max-width: ${props.mobileWidth};
+        max-height: ${props.mobileHeight};
+    `)}
 `;

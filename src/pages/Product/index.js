@@ -3,7 +3,7 @@ import React from 'react';
 import Layout from '../../components/Layout';
 
 import { RowFlexDiv, Image } from '../../styles';
-import { MainText, RightCont, SecondaryText} from './style';
+import { MainText, RightCont, SecondaryText,ProductWrapper} from './style';
 import { GREEEN_HEX, WHITE_HEX } from '../../config/constants';
 
 const Product = () => {
@@ -14,15 +14,17 @@ const Product = () => {
     }
 
     return(
+        <ProductWrapper>
             <Layout background = {GREEEN_HEX}>
                 <RowFlexDiv  justifyContent = 'space-around' alignItems = 'center' >
-                    <Image src = {data.src} width = '592px' height = '592px' background = {WHITE_HEX} />
+                    <Image src = {data.src} width = '592px' height = '592px' mobileWidth = '300px' mobileHeight = '300px' background = {WHITE_HEX} />
                     <RightCont>
                         <MainText>{data.title}</MainText>
                         <SecondaryText>{data.text}</SecondaryText>
                     </RightCont>
                 </RowFlexDiv>
             </Layout>
+        </ProductWrapper>
     )
 }
 

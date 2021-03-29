@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { CENTURY_GOTHIC_BOLD, MYRIAD_PRO } from "../../config/constants";
+import { CENTURY_GOTHIC_BOLD, MYRIAD_PRO, smBreakingPoint } from "../../config/constants";
+import { fontForSmallerScreen, mediaMaxWidth } from "../../config/helpers";
 
 export const Wrapper = styled.div`
     width: 50;
@@ -19,6 +20,10 @@ export const Title = styled.div`
     text-align: left;
     margin-bottom: 67px;
     text-transform: uppercase;
+    ${fontForSmallerScreen(55)}
+    ${mediaMaxWidth(smBreakingPoint, `
+        text-align: center;
+    `)}
 `;
 
 export const Text = styled.div`
@@ -27,4 +32,8 @@ export const Text = styled.div`
     line-height: 1.2;
     font-family: ${MYRIAD_PRO};
     text-align: left;
+    ${fontForSmallerScreen(29)}
+    ${mediaMaxWidth(smBreakingPoint, `
+        text-align: center;
+    `)}
 `;

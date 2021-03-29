@@ -10,6 +10,7 @@
 
 import styled from "styled-components";
 import { CENTURY_GOTHIC, WHITE_HEX } from "../../config/constants";
+import { fontForSmallerScreen } from "../../config/helpers";
 
 export const BackgroundImage = styled.div`
     width: 100%;
@@ -30,4 +31,5 @@ export const Text = styled.div`
     font-size: 72px;
     text-align: center;
     text-shadow: 3px 1px 3px rgba(0, 0, 0, 1);
+    ${fontForSmallerScreen(72)}
 `;

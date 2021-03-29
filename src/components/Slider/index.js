@@ -3,7 +3,7 @@ import React, {useReducer} from 'react';
 import Layout from '../Layout';
 import SliderContent from '../SliderContent';
 
-import './style.css';
+import {SliderWrapper, SliderParagraph, SliderText, SliderTextCont} from  './style';
 
 const Slider = ({data}) => {
 
@@ -32,13 +32,13 @@ const Slider = ({data}) => {
 
     return (
         <Layout>
-            <div className = 'sliderWrapper' >
+            <SliderWrapper>
                 <SliderContent slides = {data?data:slides} dispatch = {dispatchCurrIndex} currIndex = {currIndex} />
-                <div className = 'sliderTextCont' >
-                    <div className = 'sliderText' >Welcome to LabCare</div>
-                    <div className = 'sliderParagraph' > TEXTEXTTEXTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXT </div>
-                </div>
-            </div>
+                <SliderTextCont>
+                    <SliderText>Welcome to LabCare</SliderText>
+                    <SliderParagraph> TEXTEXTTEXTE XTTEXTTEXTTEXTT EXTTEXTTEXTTEXT </SliderParagraph>
+                </SliderTextCont>
+            </SliderWrapper>
         </Layout>
     );
 }

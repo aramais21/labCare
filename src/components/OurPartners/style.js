@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { BLACK_HEX, CENTURY_GOTHIC_BOLD, WHITE_HEX } from '../../config/constants';
+import { fontForSmallerScreen } from '../../config/helpers';
 
 export const PartnerWrapper = styled.div`
     flex-grow: 1;
@@ -88,4 +89,5 @@ export const PartnerHover = styled.div`
     color: ${BLACK_HEX};
     font-family: ${CENTURY_GOTHIC_BOLD};
     font-weight: bold;
+    ${fontForSmallerScreen(32)}
 `;
