@@ -48,7 +48,7 @@ export const PartnerList = styled.div`
     transition: 0.2s linear all;
 `;
 
-export const Partner = styled.div`
+export const Partner = styled.a`
     min-width: 196px;
     min-height: 196px;
     background-color: ${WHITE_HEX};
@@ -57,6 +57,10 @@ export const Partner = styled.div`
     display: inline-block;
     margin: 0 42px;
     position: relative;
+    cursor: pointer;
+    &:first-child {
+        margin-left: 0px;
+    }
 `;
 
 export const PartnerLogo = styled.div`
@@ -73,7 +77,7 @@ export const PartnerLogo = styled.div`
 
 export const PartnerHover = styled.div`
     position: absolute;
-    opacity: 1;
+    opacity: 0;
     transition: 0.2s linear all;
     top:0;
     left:0;
@@ -81,6 +85,7 @@ export const PartnerHover = styled.div`
     bottom:0;
     width: 100%;
     height: 100%;
+    background-color: ${WHITE_HEX};
     font-size: 32px;
     margin: auto;
     display: flex;
@@ -90,4 +95,7 @@ export const PartnerHover = styled.div`
     font-family: ${CENTURY_GOTHIC_BOLD};
     font-weight: bold;
     ${fontForSmallerScreen(32)}
+    ${Partner}:hover & {
+        opacity: 1;
+    }
 `;
