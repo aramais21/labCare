@@ -1,38 +1,83 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import {useSelector} from 'react-redux';
 
 import {socLinksSelector} from '../../redux/selectors';
 
-import './style.css';
+import {Image} from '../../styles'
+import {
+    FooterWrapper, 
+    TopCont, 
+    FollowUsText, 
+    Icons, 
+    IconCont, 
+    EmailText, 
+    EmailInput, 
+    EmailBtn, 
+    ArrowUp, 
+    ArrowUpImg, 
+    BottomCont, 
+    RightsCont, 
+    Mention, 
+    LinkExternal, 
+    Column,
+    ColumnTitle,
+    ColumnElement,
+} from './style.js';
 
 const Footer = () => {
     const socLinks = useSelector(socLinksSelector);
 
     return(
-        <div className = 'footerWrapper' >
-            <div className = 'topCont' >
-                <div className = 'followUsCont'>
-                    <div className = 'followUsText' > Follow Us </div>
-                    <div className = 'icons' >
+        <FooterWrapper>
+            <TopCont>
+
+                <Column marginRight = '69px' marginLeft='0px'>
+                    <FollowUsText> Follow Us </FollowUsText>
+                    <Icons>
                         {socLinks.map((item) => {
-                                return <a key = {item.id} className = 'linkExternal' target = '_blank' rel="noopener noreferrer" href = {item.link}><img className = 'linkImg' src = {item.imageUrl} alt = {item.socialNetwork}/></a>
+                            return (
+                            <LinkExternal key = {item.id} target = '_blank' rel="noopener noreferrer" href = {item.link}>
+                                <IconCont>
+                                    <Image src = {item.imageUrl} alt = {item.socialNetwork} width = '47px' height = '47px' noMargin = {true} />
+                                </IconCont>
+                            </LinkExternal>
+                            )
                         })}
-                    </div>                   
-                </div>
-                <div className = 'emailCollector' >
-                    <div className = 'emailText' >subscribe to our news letter</div>
-                    <input className = 'emailInput' placeholder = 'EMAIL' ></input>
-                    <div className = 'emailBtn' >send</div>
-                </div>
-                <div className = 'arrowUp' onClick = {() => window.scrollTo(0,0)}>
-                    <img className = 'arrowUpImg' alt = 'arrow pointing upwards' src = 'https://www.freeiconspng.com/uploads/black-circle-arrow-up-icon-31.png'/>
-                </div>
-            </div>
-            <div className = 'bottomCont' >
-                <div className = 'rightsCont' >@2021 LabCare Ltd - | all rights reserved</div>
-                <div className = 'mention' >created by aramaisay</div>
-            </div>
-        </div>
+                    </Icons>                   
+                </Column>
+
+                <Column  marginRight = '0px' marginLeft='0px'>
+                    <EmailText>subscribe to our news letter</EmailText>
+                    <EmailInput placeholder = 'EMAIL' ></EmailInput>
+                    <EmailBtn>send</EmailBtn>
+                </Column>
+
+                <Column  marginRight = '0px' marginLeft='auto'>
+                    <ColumnTitle>our contacts</ColumnTitle>
+                    <ColumnElement><Link to = '/contacts' > contact us </Link></ColumnElement>
+                </Column>
+
+                <Column  marginRight = '0px' marginLeft='145px'>
+                    <ColumnTitle>pages</ColumnTitle>
+                    <ColumnElement><Link to = '/' >home</Link></ColumnElement>
+                    <ColumnElement><Link to = '/about' >about us</Link></ColumnElement>
+                    <ColumnElement><Link to = '/activities' >activities</Link></ColumnElement>
+                    <ColumnElement><Link to = '/products' >products</Link></ColumnElement>
+                    <ColumnElement><Link to = '/contacts' >contacts</Link></ColumnElement>
+                </Column>
+                
+
+                <ArrowUp onClick = {() => window.scrollTo(0,0)}>
+                    <ArrowUpImg alt = 'arrow pointing upwards' src = 'https://www.freeiconspng.com/uploads/black-circle-arrow-up-icon-31.png'/>
+                </ArrowUp>
+
+            </TopCont>
+            <BottomCont>
+                <RightsCont>@2021 LabCare Ltd - | all rights reserved</RightsCont>
+                <Mention>created by aramaisay</Mention>
+            </BottomCont>
+        </FooterWrapper>
     )
 }
 

@@ -4,6 +4,7 @@ export const GREY_WHITE_HEX = '#F1F1F1';
 export const GREEEN_HEX = '#1aa55d';
 export const ORANGE_HEX = '#e57424';
 export const BLACK_HEX = '#000000';
+export const COD_GRAY_HEX = '#1a1a1a';
 // fonts
 export const CENTURY_GOTHIC = 'CenturyGothic';
 export const CENTURY_GOTHIC_BOLD = 'CenturyGothicBold';
