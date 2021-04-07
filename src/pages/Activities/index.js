@@ -34,19 +34,19 @@ const Activities = () => {
     ];
     const images = [
         {
-            src: 'https://previews.dropbox.com/p/thumb/ABGa5zNNhi1Dllc0n9qOYHEXAvCS03NRUsfNU6voUp61sIGHUD09JVg_qzd58jCTnM2I-DmnNJdJMptUvPAKVwz9pkpBueCeIidomZ_CYDUlawwLU6ba2NFngNoN1KThDB9G9PNMK9q83va3vgsidht3oh-FeX9OiVr9wPfXBTRFejTJjOkhB13Qi-gF4oKJvkUJHPfMkB6xLCxYaajQEfhAz7_CqAWH8Ol8qf6O-7RnMT68ZYeDCd9-mIezOnsOkPUwhynn-_NfA_gVFL-TXpa9UuA_HuhRlb3EH3Jn4Jn9sw--lcDmuYdvaIYfARgMUlIPKvfgSApmatVoo76kI20le8AclBgOdI9H8cs6jvu54A/p.jpeg?fv_content=true&size_mode=5',
+            src: 'https://www.dropbox.com/s/khrlq8h91sby0y9/lab%20serv2.jpg?raw=1',
             id: '1234'
         },
         {
-            src: 'https://previews.dropbox.com/p/thumb/ABGLFwkrsFR09rTi5ojwID4fYY9f7zac5boNO9Hm37-TO0GbTrW8HZp_acmSXJbX8bHnzWCxQYl5kDl76niGBTH6LSWA-zwQxcZd0gqapT5h5ZrdTn8JAYTZ3B2Bjt4xr-eXLQpqxGfCcoEznkNcEPC9sW-wIsZ427Od4qAG9GJ2usBqbvLor0-AmNVXaNvuhLVefPeJdF0cN9zg5dVZo4IWSlZ1w3Fm9IZtCLVR0xAb8BzA70Aih9x3o5lFiEYe11pSbd9-4C3OmFJJGkp97STHjVQQf3OB3NXZpAZzyAvwlkiOcOv8vEMLHAvbdFaf16xc1bxELebDAhVa5zSKym26DHUs-GmwgmB1g8Iw9Y8Y9w/p.jpeg?size=2048x1536&size_mode=3',
+            src: 'https://www.dropbox.com/s/pce4w1ww51b8g1b/mine%20serv1.jpg?raw=1',
             id: '123'
         },
         {
-            src: 'https://previews.dropbox.com/p/thumb/ABGoYYLhTG565dsCBRJpKndQT5RXXEEg-_K2cMZBK6aD5LmyvXhGOwsdnh8N8f00U4rG9TOf8oZQUJtGLqkR3orYPS3mqN9ZOAR6lsQZ1wFuiGP-n7DEKuXMPW-Hw8tPJXSHtpAnEhJZi5-tY72bE2TSsytbWskCTu4n-hphcuQXAAh4_cK8cuzDfTRfmfXt4DhsWNVGwgVe3Kv1CSnwUVGQNaq25-UK9cDMr5XwDqmHfwklJYVkj6llJKYvVgg4fb0ZDIIQEaIFDK2kP5fSFZUlNGPCuTr3JH1Nov9GIU7XIE-hW1LHvLECDX9t8N4NgcAUu4FnftgyeUgFrKD5jo0akznXQKPbyXYclgJGOd3UVg/p.jpeg?fv_content=true&size_mode=5',
+            src: 'https://www.dropbox.com/s/gj1pc687zaxswjr/yeast1.jpg?raw=1',
             id: '123456'
         },
         {
-            src: 'https://previews.dropbox.com/p/thumb/ABH-9CUkVHBS94KN-BvChfs679shxZ5mXKfHAVKJy7fY4s2Hfp6W96E9MzYOXF6RBVQaBPV-5kFixoGncy1QswZ2K5WAvRcdy3Hpz7yWyHBU3di2LUZzmJU5WY2Nmz7NXUlClviswtgnhJsjWeqNMkDB7tvUrRXgUmhHXMDaWNcgMPziyA5M1iROyKR6mFQ6ufjgChqgpH30XPwiLh-rPeVlFXyABBqPQuo9oO2-luU-UF5f8KVcshefYRrPj5ufysn-Yrmtx96qtYSrKgV376Ih0Qx8nw2SI_sJPvwaIlEMtkm9QUERPNFLikijJ6U1UB3b3erxGPYuJoMLKaOX9KaigNCEaKvA0tto6oMuF8NttA/p.jpeg?size=2048x1536&size_mode=3',
+            src: 'https://www.dropbox.com/s/i91das6pcp6fiqx/consultansy.jpeg?raw=1',
             id: '1232134245'
         },
     ];

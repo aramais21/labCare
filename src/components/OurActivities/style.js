@@ -35,6 +35,7 @@ export const ActivityIconCont = styled.div`
     justify-content: center;
     align-items: center;
     background-color: ${GREY_WHITE_HEX};
+    overflow: hidden;
 `;
 
 export const ActivityIcon = styled.img`

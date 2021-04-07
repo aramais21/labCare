@@ -1,8 +1,21 @@
-import {createStore} from 'redux';
+import { configureStore } from '@reduxjs/toolkit';
 
-import reducer from '../reducers';
-import {initialState} from '../initialState'
+import slideReducer from '../slices/slides';
+import partnerReducer from '../slices/partners';
+import productReducer from '../slices/products';
+import socLinkReducer from '../slices/socialLinks';
+import categoryReducer from '../slices/categories';
+import authReducer from '../slices/auth';
 
-const store = createStore(reducer,initialState);
+const store = configureStore({
+    reducer: {
+        slides: slideReducer,
+        partners: partnerReducer,
+        products: productReducer,
+        socLinks: socLinkReducer,
+        categories: categoryReducer,
+        auth: authReducer
+    }
+})
 
 export default store;

@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {Link} from 'react-router-dom';
-import {useSelector} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 
-import {socLinksSelector} from '../../redux/selectors';
+import {fecthSocLinks, selectSocLinks, selectSocLinkStatus} from '../../redux/slices/socialLinks';
 
 import {Image} from '../../styles'
 import {
@@ -26,7 +26,16 @@ import {
 } from './style.js';
 
 const Footer = () => {
-    const socLinks = useSelector(socLinksSelector);
+    const dispatch = useDispatch();
+    const socLinks = useSelector(selectSocLinks);
+    const status = useSelector(selectSocLinkStatus);
+
+    useEffect(() => {
+        if(status === 'idle') {
+            dispatch(fecthSocLinks());
+            return
+        }
+    },[status, dispatch]);
 
     return(
         <FooterWrapper>

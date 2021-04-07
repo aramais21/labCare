@@ -13,17 +13,17 @@ const Contacts = () => {
         {
             title: 'Our company gmail',
             secondary: 'lorem ipsum lorem ipsum',
-            src: 'https://previews.dropbox.com/p/thumb/ABGXRswuNxqhXX4diJnrMt46JLJO1v7GGkwdaqa4q41n4123VuaDC9KSkvwjvYS0ffzZvlE7Q8nv_OUdROAJmnLSb_QTz3axr_bCV_Ly2oRxd5tmkEH0lvChPOMDrEHVpjKveVY_2UYMNQf5zkALBTZUh65ejt-hPr-TFaZGrtk3Uk1jjJH6R5bDQ5XeZjkHSN2MvFtGw2igsiWmRlJ3QLOkw26LenqClqihtMF3EeifACwNV3YP6P4L4-UcWG6faxi5TdtCrnr2RB1bCu8awShNEa6P-ut84EQNY9U8A2LeM_BJSYkAu5D--re5oG-v2rNzaX8t62g8_0HrEn8_dcZD921mfAMetReWCQSymdsEVw/p.png?fv_content=true&size_mode=5',
+            src: 'https://www.dropbox.com/s/zqvt8fy0c5ikjx3/mail.png?raw=1',
         },
         {
             title: 'Our company gmail',
             secondary: 'lorem ipsum lorem ipsum',
-            src: 'https://previews.dropbox.com/p/thumb/ABGgBXeBqXatjyMwIpkJLeT8wDHoeOq7HuP2jE2D3ZoljdeZqCJl9fUqJ0_sMTQrf4tvKFbXZscyt_TofUWsPiFlfO0k_DWscdyBVTnWvPgGg1nhljC_eloulTzWYe97sfEQqbA2gGou_bA29WfwfHMLPE0Iq1DQqAVs_cTHBrtc__3im3E8JPxrFtNGviaYPJ7B1wUZK_XETDH060Q4yByqCBvIgWeBu8KMs-yem7thoKJugMzrNa7iVrw-vdX8wCrZA01JYWhUV-KeIVizkP7eTrOIy2ZHXBVmxdFPyaVI2nDVJO084UoHdGs34xSjP5bmVkuHj6Tujtz7gFJnfOw_vZGcr7HlKagVIFxYgGHEkg/p.png?fv_content=true&size_mode=5',
+            src: 'https://www.dropbox.com/s/ykkx2pag99led19/phone-call.png?raw=1',
         },
         {
             title: 'Our company gmail',
             secondary: 'lorem ipsum lorem ipsum',
-            src: 'https://previews.dropbox.com/p/thumb/ABGxK9BU4OnzpKpV2xPhbpSUcgzRk_notliau0JiOJAYI3fW3nKGie5J8GAHlt7noLDXFgwg55697eJ_ByXuWAmmTGQFl9YGGl_Bg7RThF5T8ecq-s-VXMh5pPPwE6IK4EjMxd1ZyEttoQN6r9JpzGwALLq_IeAedNIaJy4LiKfdPsTp0YV1JWjdpIDNRLSjJbv2kLEFT7IWZzbprB1SmKDfMh9JAzhyMabIfc41GvhG0PmEpBywuzX_VKJ45qCG2aJ-esWcaxESX7JGjx-o8gio_aC1y59gzQQvGB9dFxIhlUHtu97KHipn7xVYV84dV6V1K1PIdM-R6PnzvwZPG0wLtPl-hn8U7t25b22idCfYSQ/p.png?fv_content=true&size_mode=5',
+            src: 'https://www.dropbox.com/s/lef0iyhcv5wfp8o/placeholder.png?raw=1',
         },
     ]
     return (

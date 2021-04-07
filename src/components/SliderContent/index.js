@@ -9,7 +9,6 @@ const SliderContent = ({slides, dispatch, currIndex}) => {
         if(slides?.length>1) {
             const interval = setInterval(() => {
                 dispatch({type: 'forward'});
-                console.log('dispatched');
             }, 2000);
             return () => clearInterval(interval);
         }

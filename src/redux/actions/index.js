@@ -1,1 +1,5 @@
 export const DELETE_MESSAGE = 'DELETE_MESSAGE'; 
+export const GET_PARTNERS = "GET_PARTNERS";
+export const GET_SLIDES = "GET_SLIDES";
+export const GET_PRODUCTS = "GET_PRODUCTS";
+export const GET_SOCIAL_LINKS = "GET_SOCIAL_LINKS";

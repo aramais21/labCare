@@ -1,4 +1,6 @@
-import React, {useReducer} from 'react';
+import React, {useEffect, useReducer} from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fecthSlides, selectSlides, selectSlideStatus } from '../../redux/slices/slides';
 
 import Layout from '../Layout';
 import SliderContent from '../SliderContent';
@@ -6,12 +8,16 @@ import SliderContent from '../SliderContent';
 import {SliderWrapper, SliderParagraph, SliderText, SliderTextCont} from  './style';
 
 const Slider = ({data}) => {
+    const dispatch = useDispatch();
+    const slides = useSelector(selectSlides);
+    const status = useSelector(selectSlideStatus);
 
-    const slides = [
-        {img: 'https://previews.dropbox.com/p/thumb/ABH-6rJd4nxj-a9emJVEfVY3yBesVUYQ99GGCdD-5TlsYiwloLmb_gFqJfzZ3uAPmpirOARlRNkwjSshRxOSDwrgrr5grsH__VUkruIQsVluHvyLZA1LlbWHNWkjIGuZGd7m6iexIP33gCAIEHyZ_2965l8v8tUD9I6U6cEuR07t9sVVFQ0dR2JQRho8eDb7YMsnx1KKSykCs9Na9sdMqstLt4Goi_shwiqSaC8Qu56WBEYcidUuMvNYvExDFQa13tUiaz9Bnd-aFhB8RfMnUrjg0kuJDD3OSFfDeaUIutatPZDOgMdqIPQyXqDTcxprghBG_v7rbjsvzk3BBvE8vVm5CADvadtwf2JKVxXpPEj-Ig/p.jpeg?fv_content=true&size_mode=5', id: '123'},
-        {img: 'https://wallpaperaccess.com/full/758475.jpg', id: '1234'},
-        {img: 'https://wallpaperaccess.com/full/758475.jpg', id: '1235 iruieyib'},
-    ];
+    useEffect(() => {
+        if(status === 'idle') {
+            dispatch(fecthSlides());
+            return;
+        }
+    },[dispatch, status]);
 
     const [currIndex, dispatchCurrIndex] = useReducer((state, action) => {
         switch(action.type) {

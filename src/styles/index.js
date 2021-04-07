@@ -12,6 +12,14 @@ export const RowFlexDiv = styled.div`
     flex-grow: 1;
 `;
 
+export const Row = styled.div`
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+`;
+
 export const Image = styled.div`
     max-width: ${props => props.maxWidth}px;
     max-height: ${props => props.maxHeight}px;
