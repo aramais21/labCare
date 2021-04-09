@@ -33,6 +33,9 @@ const Update = () => {
             if (res.error) {
                 setError(res.error);
             }
+            else {
+                setError('');
+            }
             setChosenItem(null);
             update(currName, dispatch);
             setFormData({});

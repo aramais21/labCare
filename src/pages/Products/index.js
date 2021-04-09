@@ -69,9 +69,9 @@ const Products = () => {
                         <DownArrow onClick = {arrowClickHandler}></DownArrow>
                     </MainImageWrapper>
                     <RowFlexDiv justifyContent = 'space-around' alignItems = 'center' ref = {categoryRef} >
-                        {products[selectedCategory].categories.map(({src, title}) => {
+                        {products[selectedCategory].categories.map(({_id,src, title}) => {
                             return (
-                                <Link to = {`/product/${'asd'}`}>
+                                <Link to = {`/product/${_id}`} key = {_id}>
                                     <CategoryWrapper>
                                         <CategoryText>{title}</CategoryText>
                                         <Image src ={src} width = '432px' height = '432px' mobileWidth = '250px' mobileHeight = '250px'></Image>

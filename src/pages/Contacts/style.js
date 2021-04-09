@@ -29,6 +29,7 @@ export const ContactCont = styled.div`
     align-items: center;
     flex-flow: row nowrap;
     margin: 16px 0;
+    max-width: 500px;
 `;
 
 export const ContactIcon = styled.div`
@@ -56,6 +57,8 @@ export const ContactMainText = styled.div`
     font-family: ${CENTURY_GOTHIC_BOLD};
     font-weight: bold;
     line-heigth: 1.2;
+    max-width: 300px;
+    text-align: left;
     ${fontForSmallerScreen(36)}
 `;
 
@@ -65,5 +68,7 @@ export const ContactSecondText = styled.div`
     font-family: ${CENTURY_GOTHIC_BOLD};
     font-weight: bold;
     line-heigth: 1.2;
+    max-width: 300px;
+    text-align: left;
     ${fontForSmallerScreen(24)}
 `;

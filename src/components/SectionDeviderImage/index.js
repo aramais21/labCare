@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {memo} from 'react';
 import Layout from '../Layout/index.js';
+import { isEqual } from 'lodash';
 
 import {Text, BackgroundImage} from './style.js';
 
@@ -17,4 +18,4 @@ const SectionDeviderImage = ({text}) => {
     )
 }
 
-export default SectionDeviderImage;
+export default memo(SectionDeviderImage, isEqual);

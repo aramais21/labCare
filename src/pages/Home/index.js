@@ -7,7 +7,7 @@ import OurActivities from '../../components/OurActivities';
 import OurPartners from '../../components/OurPartners';
 
 // Css
-import './style.css';
+import {} from './style';
 
 const Home = () => {
 

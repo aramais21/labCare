@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { memo } from 'react';
+import { isEqual } from 'lodash';
 
 import {BackgroundImage} from './style';
 
@@ -8,4 +9,4 @@ const Slide = ({img}) => {
     );
 }
 
-export default Slide;
+export default memo(Slide, isEqual);

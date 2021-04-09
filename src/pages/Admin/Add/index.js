@@ -29,6 +29,9 @@ const Add = () => {
         if (res.error) {
             setError(res.error);
         }
+        else {
+            setError('');
+        }
         setFormData({})
         update(currName, dispatch)
     }

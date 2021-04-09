@@ -1,4 +1,4 @@
-const BACKEND_URL = process.env.REACT_APP_BACKEND;
+import { BACKEND_URL } from "../config/constants";
 
 const fetchData = async (path) => {
     try{

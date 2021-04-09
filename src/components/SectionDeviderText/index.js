@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { memo } from 'react';
+import { isEqual } from 'lodash';
 
 // Css
 import {Wrapper, InnerCont, MainText, Devider, SecondaryText} from './style.js';
@@ -18,4 +19,4 @@ const SectionDevider = ({text, backgroundColor, textColor, secondaryText, noMarg
     )
 }
 
-export default SectionDevider;
+export default memo(SectionDevider, isEqual);

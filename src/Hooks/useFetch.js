@@ -1,35 +1,31 @@
 import {useState} from 'react';
+import { BACKEND_URL } from '../config/constants';
 
 const useFetch = () => {
     // states
     const [loading, setLoading] = useState(false);
     const [data, setData] = useState(null);
     const [error, setError] = useState(null);
-    const [message, setMessage] = useState(null);
 
     // function request
-    const request = (url, Method, body, headers) => {
+    const request = async (url, method, body, headers) => {
         try {
+            setError(null);
             setLoading(true);
-            // turning method to standart
-            const method = Method.tuUpperCase();
             // adding needed headers
             headers['Content-Type'] = 'application/json';
-
+            headers['token'] = localStorage.getItem('token');
             if (method === 'GET'){
-                const response = await fetch(url, {method, headers});
+                const response = await fetch(`${BACKEND_URL}${url}`, {method, headers}); 
                 const res = await response.json();
-                setData(res.data);
+                setData(res.data); 
                 setLoading(false);
                 return res.data;  
             }
-
-            setMessage(null);
-            const response = await fetch(url, {method, headers, body: JSON.stringify(body)});
+            const response = await fetch(`${BACKEND_URL}${url}`, {method, headers, body: JSON.stringify(body)});
             const res = await response.json();
-            setMessage(res.message);
             setLoading(false);
-            return res.message;
+            return res;
         }
         catch (err){
             setError(err);
@@ -42,12 +38,8 @@ const useFetch = () => {
     const clearError = () => {
         setError(null);
     }
-
-    const clearMessage = () => {
-        setMessage(null);
-    }
     
-    return {loading, data, error, message, request, clearError, clearMessage};
+    return {loading, data, error, request, clearError };
 } 
 
 

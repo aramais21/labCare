@@ -1,4 +1,5 @@
-import React, {useEffect} from 'react';
+import React, {memo, useEffect} from 'react';
+import { isEqual } from 'lodash';
 
 import Slide from '../Slide';
 
@@ -32,4 +33,4 @@ const SliderContent = ({slides, dispatch, currIndex}) => {
 
 
 
-export default SliderContent;
+export default memo(SliderContent, isEqual);

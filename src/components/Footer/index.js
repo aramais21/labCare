@@ -23,7 +23,7 @@ import {
     Column,
     ColumnTitle,
     ColumnElement,
-} from './style.js';
+} from './style';
 
 const Footer = () => {
     const dispatch = useDispatch();

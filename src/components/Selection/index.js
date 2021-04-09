@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { memo } from 'react';
+import { isEqual } from 'lodash';
 
 import {Row} from '../../styles';
 import {SelectType} from './style';
@@ -16,4 +17,4 @@ const Selection = ({clickHandler, paths}) => {
     );
 }
 
-export default Selection;
+export default memo(Selection, isEqual);

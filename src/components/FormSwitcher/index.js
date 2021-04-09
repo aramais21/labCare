@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, memo } from 'react';
 import {useSelector, useDispatch} from 'react-redux';
+import {isEqual} from 'lodash';
 
 import {selectProductStatus, selectProducts, fecthProducts} from '../../redux/slices/products';
 
@@ -94,4 +95,4 @@ const FormSwitcher = ({name, formValue, submitHandler}) => {
     }
 }
 
-export default FormSwitcher;
+export default memo(FormSwitcher, isEqual);

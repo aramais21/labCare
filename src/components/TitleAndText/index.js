@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { memo } from 'react';
+import { isEqual } from 'lodash';
 
 import {Wrapper, Title, Text} from './style';
 
@@ -11,4 +12,4 @@ const TitleAndText = ({title, text, textColor}) => {
     );   
 }
 
-export default TitleAndText;
+export default memo(TitleAndText, isEqual);

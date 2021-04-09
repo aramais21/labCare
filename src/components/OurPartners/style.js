@@ -1,69 +1,23 @@
 import styled from 'styled-components';
-import { BLACK_HEX, CENTURY_GOTHIC_BOLD, WHITE_HEX } from '../../config/constants';
+import { CENTURY_GOTHIC_BOLD, GREEEN_HEX, WHITE_HEX } from '../../config/constants';
 import { fontForSmallerScreen } from '../../config/helpers';
 
-export const PartnerWrapper = styled.div`
-    flex-grow: 1;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-flow: row nowrap;
-    position: relative;
-`;
-
-export const ArrowWrapper = styled.div`
-    padding: ${props => props.direction==='left'?'0 50px 0 0':'0 0 0 50px'} ;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-`;
-
-export const Arrow = styled.div`
-    width: 45px;
-    height: 45px;
-    border-bottom:3px solid ${WHITE_HEX};
-    border-left: 3px solid ${WHITE_HEX};
-    transform: translate(${props => props.direction==='left'?'':'-'}50%, 0) rotate(${props => props.direction==='left'?'45':'-135'}deg);
-`;
-
-export const PartnerInner = styled.div`
-    width: 80%;
-    position: relative;
-    overflow: hidden;
-    height: 196px;
-    flex-grow: 1;
-`;
-
-export const PartnerList = styled.div`
-    display: flex;
-    flex-flow: row nowrap;
-    position: absolute;
-    top: 0;
-    left: -${props => props.itemIndex * (196 + 84)}px;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    transition: 0.2s linear all;
-`;
-
 export const Partner = styled.a`
-    min-width: 196px;
-    min-height: 196px;
+    width: 196px !important;
+    height: 196px;
     background-color: ${WHITE_HEX};
     border-radius: 100%;
     overflow: hidden;
     display: inline-block;
-    margin: 0 42px;
+    // margin: 0 42px;
     position: relative;
     cursor: pointer;
-    &:first-child {
-        margin-left: 0px;
-    }
+    // &:first-child {
+    //     margin-left: 0px;
+    // }
 `;
 
-export const PartnerLogo = styled.div`
+export const PartnerLogo = styled.img`
     position: absolute;
     top: 0;
     left: 0;
@@ -91,11 +45,12 @@ export const PartnerHover = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    color: ${BLACK_HEX};
+    color: ${GREEEN_HEX};
     font-family: ${CENTURY_GOTHIC_BOLD};
     font-weight: bold;
+    z-index:2;
     ${fontForSmallerScreen(32)}
     ${Partner}:hover & {
-        opacity: 1;
+        opacity: 0.6;
     }
 `;

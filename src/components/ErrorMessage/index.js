@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {memo} from 'react';
+import { isEqual } from 'lodash';
 
 import {Row} from '../../styles';
 import {Error} from './style';
@@ -16,4 +17,4 @@ const ErrorMessage = ({error}) => {
     )
 }
 
-export default ErrorMessage;
+export default memo(ErrorMessage, isEqual);

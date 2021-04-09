@@ -22,13 +22,15 @@ export const ActivityGridComponent = styled.div`
     display: flex;
     align-items: center;
     flex-flow: column nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     ${props => mediaMaxWidth(smBreakingPoint, `
         grid-column: ${props.mobileStartWidth} / ${props.mobileEndWidth};
         grid-row:  ${props.mobileStartHeight} / ${props.mobileEndHeight};
         padding: ${props.padding/2}px;
         overflow: hidden;
     `)}
-
+    
 `;
 
 export const Text = styled.div`
@@ -39,6 +41,9 @@ export const Text = styled.div`
     text-align: justify;
     text-align-last: center;
     ${fontForSmallerScreen(30)}
+    @media (max-width: 414px){
+        font-size: 17px;
+    }
 `;
 
 export const Title = styled.div`

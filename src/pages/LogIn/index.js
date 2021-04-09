@@ -2,8 +2,11 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import Layout from '../../components/Layout';
-import { GREEEN_HEX } from '../../config/constants';
+import Fallback from '../../components/Fallback';
+
 import { check, logIn, selectAuthStatus, selectIsAbleToOpenAdmin } from '../../redux/slices/auth';
+
+import { GREEEN_HEX } from '../../config/constants';
 
 import {Image} from '../../styles';
 import { Button, Input, LogInText, OuterCont, LayOver } from './style';
@@ -65,9 +68,7 @@ const Login = () => {
     }
     else if (status === 'loading') {
         return (
-            <Layout>
-                <Image src = 'https://www.dropbox.com/s/yehywo6h9yak5yl/Clock-Loading.gif?raw=1' ></Image>
-            </Layout>
+            <Fallback></Fallback>
         )
     }
 }

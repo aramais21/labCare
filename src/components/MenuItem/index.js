@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { memo } from 'react';
 import {NavLink} from 'react-router-dom';
+import {isEqual} from 'lodash';
 
 // Css
 import './style.css';
@@ -18,4 +19,4 @@ const MenuItem = ({to, name, onClick}) => {
     );
 }
 
-export default MenuItem;
+export default memo(MenuItem, isEqual);

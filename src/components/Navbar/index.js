@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 // Components 
 import logo from '../../assets/logo.jpg';
 import { logOut, selectIsLoggedIn } from '../../redux/slices/auth';
-import LanguagePicker from '../LanguagesPicker';
+// import LanguagePicker from '../LanguagesPicker';
 import MenuItem from '../MenuItem';
 
 // Css
@@ -50,7 +50,7 @@ const Navbar = () => {
                 </div>
             </div>
             {/* language */}
-            <LanguagePicker isSideMenuActive={isSideMenuActive} />
+            {/* <LanguagePicker isSideMenuActive={isSideMenuActive} /> */}
         </div>
     )
 }

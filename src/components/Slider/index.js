@@ -1,5 +1,7 @@
-import React, {useEffect, useReducer} from 'react';
+import React, {memo, useEffect, useReducer} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { isEqual } from 'lodash';
+
 import { fecthSlides, selectSlides, selectSlideStatus } from '../../redux/slices/slides';
 
 import Layout from '../Layout';
@@ -49,4 +51,4 @@ const Slider = ({data}) => {
     );
 }
 
-export default Slider;
+export default memo(Slider, isEqual);

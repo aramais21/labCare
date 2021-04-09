@@ -19,7 +19,7 @@ export const LayoutDiv = styled.div`
     }};
     display: flex;
     flex-flow: column nowrap;
-    align-items: center;
+    ${props => props.noAlign?'':'align-items: center;'}
     ${props => props.justifyContent?`justify-content: ${props.justifyContent};`:''}
     ${props => props.marginTop?`margin-top: ${props.marginTop};`:''}
 `;

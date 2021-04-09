@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, memo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { isEqual } from 'lodash';
 
 import { fecthCategories, selectCategories, selectCategoryStatus } from '../../redux/slices/categories';
 import { fecthPartners, selectPartners, selectPartnerStatus } from '../../redux/slices/partners';
@@ -119,4 +120,4 @@ const DataRow = ({name, onClick}) => {
     }
 }
 
-export default DataRow;
+export default memo(DataRow, isEqual);
