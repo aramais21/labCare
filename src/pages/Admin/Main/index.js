@@ -7,7 +7,7 @@ import { GREEEN_HEX } from '../../../config/constants';
 
 const Main = () => {
     return (
-        <Layout background = {GREEEN_HEX} justifyContent = 'center' >
+        <Layout background = {GREEEN_HEX} justifyContent = 'center'  >
             <MainText>
                 Welcome to the admin page,
                 here you will be able to modify dynamic data.
