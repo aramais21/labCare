@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^7.2.1",
     "immer": "^8.0.0",
     "lodash": "^4.17.21",
+    "public-ip": "^4.0.3",
     "react": "^16.13.1",
     "react-device-detect": "^1.17.0",
     "react-dom": "^16.13.1",
