@@ -1,17 +1,17 @@
 export const data = [
     {
         title: 'Our company gmail',
-        secondary: 'lorem ipsum lorem ipsum',
+        secondary: 'labcarecons@gmail.com, dmatevosyan.labcarecons@gmail.com',
         src: 'https://www.dropbox.com/s/zqvt8fy0c5ikjx3/mail.png?raw=1',
     },
     {
         title: 'Our company phone',
-        secondary: 'lorem ipsum lorem ipsum',
+        secondary: '+37477473021',
         src: 'https://www.dropbox.com/s/ykkx2pag99led19/phone-call.png?raw=1',
     },
     {
         title: 'Our coordinates',
-        secondary: 'lorem ipsum lorem ipsum',
+        secondary: 'Fuchik 13/27, 0078, Yerevan Armenia',
         src: 'https://www.dropbox.com/s/lef0iyhcv5wfp8o/placeholder.png?raw=1',
     },
 ]

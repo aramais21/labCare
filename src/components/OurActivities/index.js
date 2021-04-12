@@ -15,7 +15,7 @@ const OurActivites = () => {
     
     return (
         <Layout background = {GREEEN_HEX} >
-            <SectionDevider text = 'Our Activites' secondaryText = 'text text text text text' textColor = {WHITE_HEX} backgroundColor={GREEEN_HEX} />
+            <SectionDevider text = 'Our Activites' textColor = {WHITE_HEX} backgroundColor={GREEEN_HEX} />
             <ActivityList>
                 {data.map(({text, buttonLabel, icon, title}) => {
                     return (
