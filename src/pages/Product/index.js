@@ -6,7 +6,7 @@ import Layout from '../../components/Layout';
 import { RowFlexDiv, Image } from '../../styles';
 import { MainText, RightCont, SecondaryText,ProductWrapper} from './style';
 import { GREEEN_HEX, WHITE_HEX } from '../../config/constants';
-import useFetch from '../../hooks/useFetch';
+import useFetch from '../../Hooks/useFetch';
 import Fallback from '../../components/Fallback';
 
 const Product = () => {
