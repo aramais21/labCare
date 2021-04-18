@@ -9,7 +9,7 @@ import SliderContent from '../SliderContent';
 
 import {SliderWrapper, SliderParagraph, SliderText, SliderTextCont} from  './style';
 
-const Slider = ({data}) => {
+const Slider = ({data, mainTitle, secondaryTitle}) => {
     const dispatch = useDispatch();
     const slides = useSelector(selectSlides);
     const status = useSelector(selectSlideStatus);
@@ -43,8 +43,12 @@ const Slider = ({data}) => {
             <SliderWrapper>
                 <SliderContent slides = {data?data:slides} dispatch = {dispatchCurrIndex} currIndex = {currIndex} />
                 <SliderTextCont>
-                    <SliderText>Welcome to LabCare</SliderText>
-                    <SliderParagraph> TEXTEXTTEXTE XTTEXTTEXTTEXTT EXTTEXTTEXTTEXT </SliderParagraph>
+                    <SliderText>{mainTitle}</SliderText>
+                    {secondaryTitle?                    
+                        <SliderParagraph>{secondaryTitle}</SliderParagraph>
+                    :
+                        null
+                    }
                 </SliderTextCont>
             </SliderWrapper>
         </Layout>

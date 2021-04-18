@@ -3,12 +3,14 @@ import {useSelector, useDispatch} from 'react-redux';
 import {isEqual} from 'lodash';
 
 import {selectProductStatus, selectProducts, fecthProducts} from '../../redux/slices/products';
+import useTranslate from '../../hooks/useTranslate';
 
-import {Image} from '../../styles';
-import {Form, Input, Button, ProductText, Product, ProductActive, Row} from './style';
+import {Image, Input} from '../../styles';
+import {Form, Button, ProductText, Product, Row} from './style';
+import InputWDropbox from '../InputWDropBox';
 
-const FormSwitcher = ({name, formValue, submitHandler}) => {
-
+const FormSwitcher = ({name, formValue, submitHandler, isUsedFor}) => {
+    const {translate} = useTranslate();
     const dispatch = useDispatch();
     const status = useSelector(selectProductStatus);
     const products = useSelector(selectProducts);
@@ -24,21 +26,24 @@ const FormSwitcher = ({name, formValue, submitHandler}) => {
             dispatch(fecthProducts());
             return
         }
-    })
+        return () => {
+            
+        }
+    },[status, name, dispatch])
 
     switch(name) {
         case 'Slide':
             return (
             <Form>
-                <Input onChange = {changeHandler} value = {formData.img?formData.img:''} name = 'img' type = 'text' placeholder = 'img url' ></Input>
+                <Input onChange = {changeHandler} value = {formData.img?formData.img:''} name = 'img'  placeholder = 'img url' ></Input>
                 <Button onClick = {() => submitHandler(formData, setFormData)} >Submit</Button>
             </Form>
             );
         case 'Partner':
             return (
             <Form>
-                <Input onChange = {changeHandler} value = {formData.logo?formData.logo:''} name = 'logo' type = 'text' placeholder = 'logo url' ></Input>
-                <Input onChange = {changeHandler} value = {formData.url?formData.url:''} name = 'url' type = 'text' placeholder = 'url to their website' ></Input>
+                <Input onChange = {changeHandler} value = {formData.logo?formData.logo:''} name = 'logo'  placeholder = 'logo url' ></Input>
+                <Input onChange = {changeHandler} value = {formData.url?formData.url:''} name = 'url'  placeholder = 'url to their website' ></Input>
                 <Input onChange = {changeHandler} value = {formData.name?formData.name:''} name = 'name' type = 'name' placeholder = 'their name' ></Input>
                 <Button onClick = {() => submitHandler(formData, setFormData)} >Submit</Button>
             </Form>
@@ -46,37 +51,34 @@ const FormSwitcher = ({name, formValue, submitHandler}) => {
         case 'Product':
             return (
             <Form>
-                <Input onChange = {changeHandler} value = {formData.title?formData.title:''} name = 'title' type = 'text' placeholder = 'product name' ></Input>
-                <Input onChange = {changeHandler} value = {formData.src?formData.src:''} name = 'src' type = 'text' placeholder = 'the image that will be displayed as a small square'  ></Input>
-                <Input onChange = {changeHandler} value = {formData.mainPic?formData.mainPic:''} name = 'mainPic' type = 'text' placeholder = 'the main image' ></Input>
+                <InputWDropbox name = 'title' inputType = 'text' placeholder = 'product name' setFormData = {setFormData} value = {formData.title?formData.title:undefined} ></InputWDropbox>
+                <Input onChange = {changeHandler} value = {formData.src?formData.src:''} name = 'src'  placeholder = 'the image that will be displayed as a small square'  ></Input>
+                <Input onChange = {changeHandler} value = {formData.mainPic?formData.mainPic:''} name = 'mainPic'  placeholder = 'the main image' ></Input>
                 <Button onClick = {() => submitHandler(formData, setFormData)} >Submit</Button>
             </Form>
             );
         case 'Category':
             return (
             <>
-                <Row>
+                {isUsedFor !== 'update'?
+                    <Row>
                     {products.map((product) => {
-                        if(product._id === productId) {
-                            return (
-                                <ProductActive key = {product._id} >
-                                    <ProductText>{product.title}</ProductText>
-                                    <Image width = '200px' height = '200px' src = {product.src} />
-                                </ProductActive>
-                            );
-                        }
                         return (
-                            <Product key = {product._id} onClick = {() => setProductId(product._id)} >
-                                <ProductText>{product.title}</ProductText>
+                            <Product isActive = {product._id === productId} key = {product._id} onClick = {product._id !== productId?() => setProductId(product._id):() => {}} >
+                                <ProductText>{translate(product.title)}</ProductText>
                                 <Image width = '200px' height = '200px' src = {product.src} ></Image>
                             </Product>
                         );
                     })}
-                </Row>
+                    </Row>
+                :
+                    null
+                }
+                
                 <Form>
-                    <Input onChange = {changeHandler} value = {formData.title?formData.title:''} name = 'title' type = 'text' placeholder = 'category name' ></Input>
-                    <Input onChange = {changeHandler} value = {formData.src?formData.src:''} name = 'src' type = 'text' placeholder = 'img url' ></Input>
-                    <Input onChange = {changeHandler} value = {formData.desc?formData.desc:''} name = 'desc' type = 'text-field' placeholder = 'description' ></Input>
+                    <InputWDropbox name = 'title' inputType = 'text' placeholder = 'category name' setFormData = {setFormData} value = {formData.title?formData.title:undefined} ></InputWDropbox>
+                    <Input onChange = {changeHandler} value = {formData.src?formData.src:''} name = 'src'  placeholder = 'img url' ></Input>
+                    <InputWDropbox name = 'desc' placeholder = 'description' setFormData = {setFormData} value = {formData.desc?formData.desc:undefined} ></InputWDropbox>
                     <Button onClick = {() => submitHandler({...formData, productID: productId}, setFormData)} >Submit</Button>
                 </Form>
             </>
@@ -84,9 +86,9 @@ const FormSwitcher = ({name, formValue, submitHandler}) => {
         case 'Social Link':
             return (
                 <Form>
-                    <Input onChange = {changeHandler} value = {formData.socialNetwork?formData.socialNetwork:''} name = 'socialNetwork' type = 'text' placeholder = 'social network name' ></Input>
-                    <Input onChange = {changeHandler} value = {formData.link?formData.link:''} name = 'link' type = 'text' placeholder = 'link to the network' ></Input>
-                    <Input onChange = {changeHandler} value = {formData.imageUrl?formData.imageUrl:''} name = 'imageUrl' type = 'text' placeholder = 'icon url should be png' ></Input>
+                    <Input onChange = {changeHandler} value = {formData.socialNetwork?formData.socialNetwork:''} name = 'socialNetwork'  placeholder = 'social network name' ></Input>
+                    <Input onChange = {changeHandler} value = {formData.link?formData.link:''} name = 'link'  placeholder = 'link to the network' ></Input>
+                    <Input onChange = {changeHandler} value = {formData.imageUrl?formData.imageUrl:''} name = 'imageUrl'  placeholder = 'icon url should be png' ></Input>
                     <Button onClick = {() => submitHandler(formData, setFormData)} >Submit</Button>
                 </Form>
             );

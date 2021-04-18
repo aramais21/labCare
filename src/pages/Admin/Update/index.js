@@ -60,7 +60,7 @@ const Update = () => {
                     <>
                         <DataRow name = {currName} onClick = {clickHandler} ></DataRow>
                         {chosenItem?
-                            <FormSwitcher name = {currName} formValue = {chosenItem} submitHandler = {submit} ></FormSwitcher>
+                            <FormSwitcher name = {currName} formValue = {chosenItem} submitHandler = {submit} isUsedFor = 'update' ></FormSwitcher>
                         :
                             null
                         }

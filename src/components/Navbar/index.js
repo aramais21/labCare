@@ -4,8 +4,10 @@ import {Link} from 'react-router-dom';
 
 // Components 
 import logo from '../../assets/logo.jpg';
+import { regularNavBar } from '../../data';
+import useTranslate from '../../hooks/useTranslate';
 import { logOut, selectIsLoggedIn } from '../../redux/slices/auth';
-// import LanguagePicker from '../LanguagesPicker';
+import LanguagePicker from '../LanguagesPicker';
 import MenuItem from '../MenuItem';
 
 // Css
@@ -15,6 +17,7 @@ const Navbar = () => {
     const dispatch = useDispatch();
     const [isSideMenuActive, setIsSideMenuActive] = useState(false);
     const isLoggedIn = useSelector(selectIsLoggedIn);
+    const {translateLocal} = useTranslate();
 
     return(
         <div className = 'NavOutter' >
@@ -34,10 +37,10 @@ const Navbar = () => {
                         </>
                     :
                         <>
-                            <MenuItem to = '/about' name = 'About Us' ></MenuItem>
-                            <MenuItem to = '/activities' name = 'Activities' ></MenuItem>
-                            <MenuItem to = '/products' name = 'Products' ></MenuItem>
-                            <MenuItem to = '/contacts' name = 'Our Contacts' ></MenuItem>
+                            <MenuItem to = '/about' name = {translateLocal(regularNavBar.aboutUS)} ></MenuItem>
+                            <MenuItem to = '/activities' name = {translateLocal(regularNavBar.activities)} ></MenuItem>
+                            <MenuItem to = '/products' name = {translateLocal(regularNavBar.products)} ></MenuItem>
+                            <MenuItem to = '/contacts' name = {translateLocal(regularNavBar.contacts)} ></MenuItem>
                         </>
                     }
                     
@@ -50,7 +53,11 @@ const Navbar = () => {
                 </div>
             </div>
             {/* language */}
-            {/* <LanguagePicker isSideMenuActive={isSideMenuActive} /> */}
+            {isLoggedIn?
+                null
+            :
+                <LanguagePicker isSideMenuActive={isSideMenuActive} />
+            }
         </div>
     )
 }

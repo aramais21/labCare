@@ -20,7 +20,7 @@ export const postData = async (path, body) => {
         headers['token'] = localStorage.getItem('token');
         const response = await fetch(`${BACKEND_URL}${path}`,{method: 'POST',headers, body: JSON.stringify(body)});
         const res = await response.json();
-        if(res.error && res.error === '') {
+        if(res.error && res.error === 'smth went wrong JWT: expired') {
             localStorage.removeItem('token');
         }
         return res;        

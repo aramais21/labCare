@@ -7,15 +7,17 @@ import OurActivities from '../../components/OurActivities';
 import OurPartners from '../../components/OurPartners';
 
 // Css
-import {} from './style';
+import useTranslate from '../../hooks/useTranslate';
+import { mainTitle, moto } from '../../data/home';
 
 const Home = () => {
+    const {translateLocal} = useTranslate();
 
     return(
         <div className = 'HomeMain' >
-            <Slider />
+            <Slider mainTitle = {translateLocal(mainTitle.title)} secondaryTitle = {translateLocal(mainTitle.moto)} />
             <OurActivities />
-            <SectionDeviderImage text = 'Quality, trust and experience' />
+            <SectionDeviderImage text = {translateLocal(moto)} />
             <OurPartners />
         </div>
     )

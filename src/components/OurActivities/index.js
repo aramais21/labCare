@@ -3,27 +3,31 @@ import { Link } from 'react-router-dom';
 
 import Layout from '../Layout';
 import SectionDevider from '../SectionDeviderText'
+import useTranslate from '../../hooks/useTranslate';
 
 import { GREEEN_HEX, WHITE_HEX } from '../../config/constants';
-
-import {data} from './data';
+import {data} from '../../data/activities';
 
 import {Image} from '../../styles';
 import { ActivityList, ActivityCardWrapper, ActivityIconCont, ActivityCardTitle, ActivityCardText, ActivityCardButton } from './style.js';
+import { buttonLabels } from '../../data';
+import { activitiesTitle } from '../../data/home';
 
 const OurActivites = () => {
+
+    const {translateLocal} = useTranslate();
     
     return (
         <Layout background = {GREEEN_HEX} >
-            <SectionDevider text = 'Our Activites' textColor = {WHITE_HEX} backgroundColor={GREEEN_HEX} />
+            <SectionDevider text = {translateLocal(activitiesTitle)} textColor = {WHITE_HEX} backgroundColor={GREEEN_HEX} />
             <ActivityList>
-                {data.map(({text, buttonLabel, icon, title}) => {
+                {data.map(({desc, icon, title}) => {
                     return (
-                        <ActivityCardWrapper key = {title} >
+                        <ActivityCardWrapper key = {title.ENG} >
                             <ActivityIconCont><Image src = {icon} alt = 'icon' width = '60%' height = '60%' noBackground = {true} ></Image></ActivityIconCont>
-                            <ActivityCardTitle>{title}</ActivityCardTitle>
-                            <ActivityCardText>{text}</ActivityCardText>
-                            <Link to = '/activities' > <ActivityCardButton>{buttonLabel}</ActivityCardButton> </Link>
+                            <ActivityCardTitle>{translateLocal(title)}</ActivityCardTitle>
+                            <ActivityCardText>{translateLocal(desc).slice(0, 200)}</ActivityCardText>
+                            <Link to = '/activities' > <ActivityCardButton>{translateLocal(buttonLabels.more)}</ActivityCardButton> </Link>
                         </ActivityCardWrapper>
                     );
                 })}

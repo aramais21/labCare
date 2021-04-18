@@ -6,6 +6,7 @@ import productReducer from '../slices/products';
 import socLinkReducer from '../slices/socialLinks';
 import categoryReducer from '../slices/categories';
 import authReducer from '../slices/auth';
+import langReducer from '../slices/lang';
 
 const store = configureStore({
     reducer: {
@@ -14,7 +15,8 @@ const store = configureStore({
         products: productReducer,
         socLinks: socLinkReducer,
         categories: categoryReducer,
-        auth: authReducer
+        auth: authReducer,
+        lang: langReducer
     }
 })
 

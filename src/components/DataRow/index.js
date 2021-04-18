@@ -7,20 +7,22 @@ import { fecthPartners, selectPartners, selectPartnerStatus } from '../../redux/
 import { fecthProducts, selectProducts, selectProductStatus } from '../../redux/slices/products';
 import { fecthSlides, selectSlides, selectSlideStatus } from '../../redux/slices/slides';
 import { fecthSocLinks, selectSocLinks, selectSocLinkStatus } from '../../redux/slices/socialLinks';
+import useTranslate from '../../hooks/useTranslate';
 
 import { Row, Image } from '../../styles';
-import {TextWrapper, TextCont} from './style';
+import { TextCont, Wrapper} from './style';
 
 const Text = ({onClick, children}) => {
     return (
-        <TextWrapper onClick = {onClick} >
+        <Wrapper onClick = {onClick} >
             <TextCont>{children}</TextCont>
-        </TextWrapper>
+        </Wrapper>
     )
 }
 
 const DataRow = ({name, onClick}) => {
     const dispatch = useDispatch();
+    const {translate} = useTranslate()
 
     const slideStatus = useSelector(selectSlideStatus);
     const partnerStatus = useSelector(selectPartnerStatus);
@@ -71,7 +73,11 @@ const DataRow = ({name, onClick}) => {
             return (
                 <Row>
                     {slides.map((slide) => {
-                        return (<Image onClick = {() => onClick(slide)}  width = '200px' height = '200px' src = {slide.img} ></Image>)
+                        return (
+                            <Wrapper key = {slide._id}>
+                                <Image onClick = {() => onClick(slide)}  width = '200px' height = '200px' src = {slide.img} ></Image>
+                            </Wrapper>
+                        );
                     })}
                 </Row>
             );
@@ -80,7 +86,7 @@ const DataRow = ({name, onClick}) => {
                 <Row>
                     {partners.map((partner) => {
                         return (
-                            <Text onClick = {() => onClick(partner)} >{partner.name}</Text>
+                            <Text key = {partner._id} onClick = {() => onClick(partner)} >{partner.name}</Text>
                         )
                     })}
                 </Row>
@@ -90,7 +96,7 @@ const DataRow = ({name, onClick}) => {
                 <Row>
                     {products.map((product) => {
                         return (
-                            <Text onClick = {() => onClick(product)} >{product.title}</Text>
+                            <Text key = {product._id} onClick = {() => onClick(product)} >{translate(product.title)}</Text>
                         )
                     })}
                 </Row>
@@ -100,7 +106,7 @@ const DataRow = ({name, onClick}) => {
                 <Row>
                     {categories.map((category) => {
                         return (
-                            <Text onClick = {() => onClick(category)} >{category.title}</Text>
+                            <Text key = {category._id} onClick = {() => onClick(category)} >{translate(category.title)}</Text>
                         )
                     })}
                 </Row>
@@ -110,7 +116,7 @@ const DataRow = ({name, onClick}) => {
                 <Row>
                     {socialLinks.map((socLink) => {
                         return (
-                            <Text onClick = {() => onClick(socLink)} >{socLink.socialNetwork}</Text>
+                            <Text key = {socLink._id} onClick = {() => onClick(socLink)} >{socLink.socialNetwork}</Text>
                         )
                     })}
                 </Row>

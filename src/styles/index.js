@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { smBreakingPoint, WHITE_HEX } from "../config/constants";
-import { mediaMaxWidth } from "../config/helpers";
+import { smBreakingPoint, WHITE_HEX, GREEEN_HEX, CENTURY_GOTHIC_BOLD } from "../config/constants";
+import { mediaMaxWidth, fontForSmallerScreen } from "../config/helpers";
 
 export const RowFlexDiv = styled.div`
     width: 100%;
@@ -37,4 +37,17 @@ export const Image = styled.div`
         max-width: ${props.mobileWidth};
         max-height: ${props.mobileHeight};
     `)}
+`;
+
+export const Input = styled.input.attrs((props) => ({type: props.text?props.text:'text'}))`
+    background-color: ${WHITE_HEX};
+    color: ${GREEEN_HEX};
+    font-family: ${CENTURY_GOTHIC_BOLD};
+    font-weight: bold;
+    padding: 8px 4px;
+    font-size: 16px;
+    margin: 8px 0;
+    min-width: 300px;
+    outline: none;
+    ${fontForSmallerScreen(16)};
 `;

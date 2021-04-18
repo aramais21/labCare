@@ -7,19 +7,6 @@ export const Form = styled.form`
     flex-flow: column nowrap;
     margin: 16px 0;
     align-items: center;
-`
-
-export const Input = styled.input`
-    background-color: ${WHITE_HEX};
-    color: ${GREEEN_HEX};
-    font-family: ${CENTURY_GOTHIC_BOLD};
-    font-weight: bold;
-    padding: 8px 4px;
-    font-size: 16px;
-    margin: 8px 0;
-    min-width: 300px;
-    outline: none;
-    ${fontForSmallerScreen(16)};
 `;
 
 export const Button = styled.div`
@@ -54,11 +41,10 @@ export const ProductText = styled.div`
 export const Product = styled.div`
     margin: 16px;
     padding: 16px 8px;
-    cursor: pointer;
-`;
-
-export const ProductActive = styled.div`
-    margin: 16px;
-    padding: 16px 8px;
-    border: 3px solid ${WHITE_HEX};
+    ${props => {
+        if(props.isActive) {
+            return `border: 3px solid ${WHITE_HEX};`;
+        }
+        return 'cursor: pointer;';
+    }}
 `;

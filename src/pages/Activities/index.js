@@ -1,11 +1,15 @@
 import React from 'react';
 
 import {Image} from '../../styles'
+import useTranslate from '../../hooks/useTranslate';
+
+import { data, pictures } from '../../data/activities';
 
 import { ActivityWrapper, ActivityGridComponent, Title, Text, Line } from './style';
-import { data, images } from './data';
-
+ 
 const Activities = () => {
+    const {translateLocal} = useTranslate();
+
     return(
         <ActivityWrapper>
             {data.map((item, index) => {
@@ -24,14 +28,14 @@ const Activities = () => {
                         mobileEndWidth = {2} 
                     >
                         <Title color = {item.color} >
-                            {item.title}
+                            {translateLocal(item.title)}
                             <Line color = {item.color} ></Line>
                         </Title>
-                        <Text color = {item.color} >{item.text}</Text>
+                        <Text color = {item.color} >{ translateLocal(item.desc)}</Text>
                     </ActivityGridComponent>
                 );
             })}
-            {images.map((item, index) => {
+            {pictures.map((item, index) => {
                 return (
                     <ActivityGridComponent 
                         key = {item.id} 

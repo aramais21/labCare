@@ -44,6 +44,7 @@ export const ColumnElement = styled.div`
     font-size: 18px;
     line-height: 21.6px;
     margin-bottom: 24px;
+    text-transform: lowercase;
 `;
 
 export const FollowUsText = styled.div`
@@ -111,7 +112,7 @@ export const EmailInput = styled.input`
 `;
 
 export const EmailBtn = styled.div`
-    width: 98px;
+    max-width: 105px;
     height: 31px;
     background-color: ${GREEEN_HEX};
     cursor: pointer;

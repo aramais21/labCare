@@ -24,11 +24,15 @@ import {
     ColumnTitle,
     ColumnElement,
 } from './style';
+import useTranslate from '../../hooks/useTranslate';
+import { placeholder, titles } from '../../data/footer';
+import { buttonLabels, regularNavBar } from '../../data';
 
 const Footer = () => {
     const dispatch = useDispatch();
     const socLinks = useSelector(selectSocLinks);
     const status = useSelector(selectSocLinkStatus);
+    const {translateLocal} = useTranslate();
 
     useEffect(() => {
         if(status === 'idle') {
@@ -42,7 +46,7 @@ const Footer = () => {
             <TopCont>
 
                 <Column marginRight = '69px' marginLeft='0px'>
-                    <FollowUsText> Follow Us </FollowUsText>
+                    <FollowUsText>{translateLocal(titles.followUs)}</FollowUsText>
                     <Icons>
                         {socLinks.map((item) => {
                             return (
@@ -57,23 +61,23 @@ const Footer = () => {
                 </Column>
 
                 <Column  marginRight = '0px' marginLeft='0px'>
-                    <EmailText>subscribe to our news letter</EmailText>
-                    <EmailInput placeholder = 'EMAIL' ></EmailInput>
-                    <EmailBtn>send</EmailBtn>
+                    <EmailText>{translateLocal(titles.subscribe)}</EmailText>
+                    <EmailInput placeholder = {translateLocal(placeholder)} ></EmailInput>
+                    <EmailBtn>{translateLocal(buttonLabels.send)}</EmailBtn>
                 </Column>
 
                 <Column  marginRight = '0px' marginLeft='auto'>
-                    <ColumnTitle>our contacts</ColumnTitle>
-                    <ColumnElement><Link to = '/contacts' > contact us </Link></ColumnElement>
+                    <ColumnTitle>{translateLocal(titles.ourContacts)}</ColumnTitle>
+                    <ColumnElement><Link to = '/contacts' > {translateLocal(regularNavBar.contacts)} </Link></ColumnElement>
                 </Column>
 
                 <Column  marginRight = '0px' marginLeft='145px'>
-                    <ColumnTitle>pages</ColumnTitle>
-                    <ColumnElement><Link to = '/' >home</Link></ColumnElement>
-                    <ColumnElement><Link to = '/about' >about us</Link></ColumnElement>
-                    <ColumnElement><Link to = '/activities' >activities</Link></ColumnElement>
-                    <ColumnElement><Link to = '/products' >products</Link></ColumnElement>
-                    <ColumnElement><Link to = '/contacts' >contacts</Link></ColumnElement>
+                    <ColumnTitle>{translateLocal(titles.pages)}</ColumnTitle>
+                    <ColumnElement><Link to = '/' >{translateLocal(regularNavBar.home)}</Link></ColumnElement>
+                    <ColumnElement><Link to = '/about' >{translateLocal(regularNavBar.aboutUS)}</Link></ColumnElement>
+                    <ColumnElement><Link to = '/activities' >{translateLocal(regularNavBar.activities)}</Link></ColumnElement>
+                    <ColumnElement><Link to = '/products' >{translateLocal(regularNavBar.products)}</Link></ColumnElement>
+                    <ColumnElement><Link to = '/contacts' >{translateLocal(regularNavBar.contacts)}</Link></ColumnElement>
                 </Column>
                 
 

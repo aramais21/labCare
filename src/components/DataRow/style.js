@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { CENTURY_GOTHIC_BOLD, GREEEN_HEX, WHITE_HEX } from "../../config/constants";
 import { fontForSmallerScreen } from "../../config/helpers";
 
-export const TextWrapper = styled.div`
+export const Wrapper = styled.div`
     width: 200px;
     height: 200px;
     background-color: ${WHITE_HEX};

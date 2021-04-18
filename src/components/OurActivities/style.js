@@ -51,6 +51,8 @@ export const ActivityCardTitle = styled.div`
     line-height: 1.2;
     text-align: center;
     margin-top: 20px;
+    min-height: 60px;
+    text-transform:  capitalize;
     ${fontForSmallerScreen(25)}
 `;
 
@@ -60,8 +62,9 @@ export const ActivityCardText = styled.div`
     font-family: ${CENTURY_GOTHIC_BOLD};
     font-weight: 700;
     line-height: 1.2;
-    margin-top: 74px;
+    margin-top: 30px;
     text-align: center;
+    word-break: break-all;
     ${fontForSmallerScreen(21)}
     ${mediaMaxWidth(smBreakingPoint,`
         margin-top: 20px;

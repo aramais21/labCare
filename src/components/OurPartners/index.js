@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import Slider from 'react-slick';
 
 import { GREEEN_HEX, WHITE_HEX } from "../../config/constants";
+import { partnersTitle } from '../../data/home';
+import useTranslate from '../../hooks/useTranslate';
 import { fecthPartners, selectPartners, selectPartnerStatus } from '../../redux/slices/partners';
 import Layout from "../Layout"
 import SectionDevider from '../SectionDeviderText';
@@ -13,6 +15,7 @@ const OurPartners = () => {
     const dispatch = useDispatch();
     const partners = useSelector(selectPartners);
     const status = useSelector(selectPartnerStatus);
+    const {translateLocal} = useTranslate();
 
     useEffect(() => {
         const asyncFunc = async () => {
@@ -26,7 +29,7 @@ const OurPartners = () => {
 
     return (
         <Layout background={GREEEN_HEX} noAlign = {true} fixedHeight = {600}  >
-            <SectionDevider text='Our Partners' textColor = {WHITE_HEX} backgroundColor={GREEEN_HEX} noMarginBottom={true}></SectionDevider>
+            <SectionDevider text={translateLocal(partnersTitle)} textColor = {WHITE_HEX} backgroundColor={GREEEN_HEX} noMarginBottom={true}></SectionDevider>
             <Slider 
                 infinite = {true} 
                 speed = {500} 

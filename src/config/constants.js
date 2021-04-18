@@ -25,3 +25,9 @@ export const lgBreakingPoint = '1920px';
 // url
 export const BACKEND_URL = process.env.REACT_APP_BACKEND;
 export const LAODER_URL = 'https://www.dropbox.com/s/8rjodyo5v0clcgn/rippleLoading.gif?raw=1';
+// lang
+export const langEnum = {
+    ARM: 'ARM',
+    ENG: 'ENG',
+    RUS: 'RUS'
+}
