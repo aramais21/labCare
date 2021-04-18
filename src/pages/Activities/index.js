@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {Image} from '../../styles'
-import useTranslate from '../../hooks/useTranslate';
+import useTranslate from '../../Hooks/useTranslate';
 
 import { data, pictures } from '../../data/activities';
 

@@ -3,7 +3,7 @@ import {useSelector, useDispatch} from 'react-redux';
 import {isEqual} from 'lodash';
 
 import {selectProductStatus, selectProducts, fecthProducts} from '../../redux/slices/products';
-import useTranslate from '../../hooks/useTranslate';
+import useTranslate from '../../Hooks/useTranslate';
 
 import {Image, Input} from '../../styles';
 import {Form, Button, ProductText, Product, Row} from './style';

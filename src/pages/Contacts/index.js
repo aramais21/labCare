@@ -2,7 +2,7 @@ import React from 'react';
 
 import SectionDevider from '../../components/SectionDeviderText';
 import Layout from '../../components/Layout';
-import useTranslate from '../../hooks/useTranslate';
+import useTranslate from '../../Hooks/useTranslate';
 
 import { RowFlexDiv, Image } from '../../styles';
 import { ContactSecondText ,ContactMainText ,ContactInfo ,ContactIcon ,ContactCont ,ContactWrapper, LeftCont, RightCont} from './style';

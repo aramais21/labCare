@@ -4,7 +4,7 @@ import Slider from 'react-slick';
 
 import { GREEEN_HEX, WHITE_HEX } from "../../config/constants";
 import { partnersTitle } from '../../data/home';
-import useTranslate from '../../hooks/useTranslate';
+import useTranslate from '../../Hooks/useTranslate';
 import { fecthPartners, selectPartners, selectPartnerStatus } from '../../redux/slices/partners';
 import Layout from "../Layout"
 import SectionDevider from '../SectionDeviderText';

@@ -7,7 +7,7 @@ import OurActivities from '../../components/OurActivities';
 import OurPartners from '../../components/OurPartners';
 
 // Css
-import useTranslate from '../../hooks/useTranslate';
+import useTranslate from '../../Hooks/useTranslate';
 import { mainTitle, moto } from '../../data/home';
 
 const Home = () => {

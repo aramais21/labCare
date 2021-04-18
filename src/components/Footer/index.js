@@ -24,7 +24,7 @@ import {
     ColumnTitle,
     ColumnElement,
 } from './style';
-import useTranslate from '../../hooks/useTranslate';
+import useTranslate from '../../Hooks/useTranslate';
 import { placeholder, titles } from '../../data/footer';
 import { buttonLabels, regularNavBar } from '../../data';
 

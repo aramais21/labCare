@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import Layout from '../Layout';
 import SectionDevider from '../SectionDeviderText'
-import useTranslate from '../../hooks/useTranslate';
+import useTranslate from '../../Hooks/useTranslate';
 
 import { GREEEN_HEX, WHITE_HEX } from '../../config/constants';
 import {data} from '../../data/activities';
