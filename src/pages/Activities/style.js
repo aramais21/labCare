@@ -38,7 +38,6 @@ export const Text = styled.div`
     font-family: ${MYRIAD_PRO};
     font-size: 30px;
     line-height: 1.2;
-    text-align: justify;
     text-align-last: center;
     ${fontForSmallerScreen(30)}
     @media (max-width: 414px){

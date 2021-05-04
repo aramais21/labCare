@@ -11,7 +11,7 @@ export const data = [
             ENG: 'Our company gmail',
             RUS: 'Наша компания gmail'
         },
-        secondary: 'labcarecons@gmail.com, dmatevosyan.labcarecons@gmail.com',
+        secondary: 'labcarecons@gmail.com',
         src: 'https://www.dropbox.com/s/zqvt8fy0c5ikjx3/mail.png?raw=1',
     },
     {

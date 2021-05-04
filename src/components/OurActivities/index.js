@@ -26,7 +26,7 @@ const OurActivites = () => {
                         <ActivityCardWrapper key = {title.ENG} >
                             <ActivityIconCont><Image src = {icon} alt = 'icon' width = '60%' height = '60%' noBackground = {true} ></Image></ActivityIconCont>
                             <ActivityCardTitle>{translateLocal(title)}</ActivityCardTitle>
-                            <ActivityCardText>{translateLocal(desc).slice(0, 200)}</ActivityCardText>
+                            <ActivityCardText>{translateLocal(desc).slice(0, 180)}...</ActivityCardText>
                             <Link to = '/activities' > <ActivityCardButton>{translateLocal(buttonLabels.more)}</ActivityCardButton> </Link>
                         </ActivityCardWrapper>
                     );
