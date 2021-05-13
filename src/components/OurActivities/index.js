@@ -21,12 +21,12 @@ const OurActivites = () => {
         <Layout background = {GREEEN_HEX} >
             <SectionDevider text = {translateLocal(activitiesTitle)} textColor = {WHITE_HEX} backgroundColor={GREEEN_HEX} />
             <ActivityList>
-                {data.map(({desc, icon, title}) => {
+                {Object.keys(data).map((key) => {
                     return (
-                        <ActivityCardWrapper key = {title.ENG} >
-                            <ActivityIconCont><Image src = {icon} alt = 'icon' width = '60%' height = '60%' noBackground = {true} ></Image></ActivityIconCont>
-                            <ActivityCardTitle>{translateLocal(title)}</ActivityCardTitle>
-                            <ActivityCardText>{translateLocal(desc).slice(0, 180)}...</ActivityCardText>
+                        <ActivityCardWrapper key = {data[key].title.ENG} >
+                            <ActivityIconCont><Image src = {data[key].icon} alt = 'icon' width = '60%' height = '60%' noBackground = {true} ></Image></ActivityIconCont>
+                            <ActivityCardTitle>{translateLocal(data[key].title)}</ActivityCardTitle>
+                            <ActivityCardText>{translateLocal(data[key].minDesc)}</ActivityCardText>
                             <Link to = '/activities' > <ActivityCardButton>{translateLocal(buttonLabels.more)}</ActivityCardButton> </Link>
                         </ActivityCardWrapper>
                     );

@@ -15,7 +15,7 @@ const OurMission = () => {
     return (
         <Layout background = {GREEEN_HEX} >
             <RowFlexDiv justifyContent = 'space-around' alignItems = 'center' >
-                <TitleAndText text={translateLocal(ourMission.desc)} title={translateLocal(ourMission.title)} textColor={WHITE_HEX} ></TitleAndText>
+                <TitleAndText desc={ourMission.desc} title={translateLocal(ourMission.title)} textColor={WHITE_HEX} ></TitleAndText>
                 <Image maxWidth = {668} maxHeight = {755} width = '668px' height = '755px' mobileWidth = '300px' mobileHeight = '330px' src = {ourMission.img} ></Image>
             </RowFlexDiv>
         </Layout>

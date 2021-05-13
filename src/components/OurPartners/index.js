@@ -68,6 +68,7 @@ const OurPartners = () => {
                 ]}
             >
             {partners.map(({_id, url, logo, name}) => {
+                console.log(_id,'printed')
                 return (
                     <Partner key = {_id} href = {url} target = '_blank' rel="noopener noreferrer">
                         <PartnerLogo src={logo} alt = {name}/>

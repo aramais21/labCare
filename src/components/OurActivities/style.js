@@ -65,6 +65,10 @@ export const ActivityCardText = styled.div`
     margin-top: 30px;
     text-align: center;
     word-break: break-all;
+    overflow: hidden;
+    white-space: pre-line;
+    text-overflow: ellipsis;
+    height: 300px;
     ${fontForSmallerScreen(21)}
     ${mediaMaxWidth(smBreakingPoint,`
         margin-top: 20px;

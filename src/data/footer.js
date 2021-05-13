@@ -10,7 +10,7 @@ export const titles = {
         RUS: "ПОДПИСЫВАЙТЕСЬ НА НАШУ НОВОСТНУЮ РАССЫЛКУ"
     },
     ourContacts: {
-        ARM: "մեր շփումները",
+        ARM: "կապ մեզ հետ",
         ENG: "our contacts",
         RUS: "наши контакты"
     },

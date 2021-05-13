@@ -1,13 +1,21 @@
 import React, { memo } from 'react';
 import { isEqual } from 'lodash';
 
-import {Wrapper, Title, Text} from './style';
+import useTranslate from '../../Hooks/useTranslate';
 
-const TitleAndText = ({title, text, textColor}) => {
+import {Wrapper, Title, Text, ListItem} from './style';
+
+const TitleAndText = ({title, desc, textColor}) => {
+    const {translateLocal} = useTranslate();
     return (
         <Wrapper>
             <Title textColor = {textColor} >{title}</Title>
-            <Text textColor = {textColor} >{text}</Text>
+            {desc.map((item) => {
+                if(item.type === 'text') {
+                    return <Text textColor={textColor} >{translateLocal(item)}</Text>
+                }
+                return <ListItem textColor={textColor} >{translateLocal(item)}</ListItem>
+            })}
         </Wrapper>
     );   
 }

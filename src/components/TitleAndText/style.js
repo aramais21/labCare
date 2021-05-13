@@ -31,7 +31,20 @@ export const Text = styled.div`
     font-size: 29px;
     line-height: 1.2;
     font-family: ${MYRIAD_PRO};
-    text-align: left;
+    text-indent: 40px;
+    margin-top: 1rem;
+    ${fontForSmallerScreen(29)}
+    ${mediaMaxWidth(smBreakingPoint, `
+        text-align: center;
+    `)}
+`;
+
+export const ListItem = styled.li`
+    color: ${props => props.textColor};
+    font-size: 29px;
+    line-height: 1.2;
+    font-family: ${MYRIAD_PRO};
+    margin-top: 1rem;
     ${fontForSmallerScreen(29)}
     ${mediaMaxWidth(smBreakingPoint, `
         text-align: center;

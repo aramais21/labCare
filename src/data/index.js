@@ -33,7 +33,7 @@ export const regularNavBar = {
         RUS: "Продукты"
     },
     contacts: {
-        ARM: "Մեր կապերը",
+        ARM: "կապ",
         ENG: "Our Contacts",
         RUS: "Наши контакты"
     }

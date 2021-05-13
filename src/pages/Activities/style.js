@@ -1,34 +1,30 @@
 import styled from 'styled-components';
-import { CENTURY_GOTHIC, MYRIAD_PRO, smBreakingPoint } from '../../config/constants';
+import { CENTURY_GOTHIC, mdBreakingPoint, MYRIAD_PRO } from '../../config/constants';
 import { fontForSmallerScreen, mediaMaxWidth } from '../../config/helpers';
 
 export const ActivityWrapper = styled.div`
     width: 100%;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 50vh 50vh 50vh 50vh 50vh 50vh;
+    display: flex;
     margin-top: 5.626rem;
-    ${mediaMaxWidth(smBreakingPoint,`
-        grid-template-columns: 100%;
-        grid-template-rows: 50vh 100vh 50vh 100vh 50vh 100vh 50vh 100vh;
+    flex-flow: row wrap;
+    
+`;
+
+export const ActivityColumn = styled.div`
+    width: 50%;
+    min-width: 300px;
+    ${mediaMaxWidth(mdBreakingPoint, `
+        width: 100%;
     `)}
 `;
 
 export const ActivityGridComponent = styled.div`
-    grid-column: ${props => props.startWidth} / ${props => props.endWidth};
-    grid-row:  ${props => props.startHeight} / ${props => props.endHeight};
     background-color: ${props => props.backgroundColor};
-    padding: ${props => props.padding}px;
+    ${props => props.noPadding?'':'padding: 71px;'}
     display: flex;
-    align-items: center;
     flex-flow: column nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    ${props => mediaMaxWidth(smBreakingPoint, `
-        grid-column: ${props.mobileStartWidth} / ${props.mobileEndWidth};
-        grid-row:  ${props.mobileStartHeight} / ${props.mobileEndHeight};
-        padding: ${props.padding/2}px;
-        overflow: hidden;
+    ${props => props.noPadding?'':mediaMaxWidth(mdBreakingPoint, `
+        padding: 35.5px 0px;
     `)}
     
 `;
@@ -36,13 +32,18 @@ export const ActivityGridComponent = styled.div`
 export const Text = styled.div`
     color: ${props => props.color};
     font-family: ${MYRIAD_PRO};
-    font-size: 30px;
+    font-size: 26px;
     line-height: 1.2;
-    text-align-last: center;
-    ${fontForSmallerScreen(30)}
-    @media (max-width: 414px){
-        font-size: 17px;
-    }
+    text-indent: 40px;
+    ${fontForSmallerScreen(26)}
+`;
+
+export const ListItem = styled.li`
+    color: ${props => props.color};
+    font-family: ${MYRIAD_PRO};
+    font-size: 26px;
+    line-height: 1.2;
+    ${fontForSmallerScreen(26)}
 `;
 
 export const Title = styled.div`

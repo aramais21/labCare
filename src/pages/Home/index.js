@@ -15,7 +15,7 @@ const Home = () => {
 
     return(
         <div className = 'HomeMain' >
-            <Slider mainTitle = {translateLocal(mainTitle.title)} secondaryTitle = {translateLocal(mainTitle.moto)} />
+            <Slider mainTitle = {translateLocal(mainTitle.title)} />
             <OurActivities />
             <SectionDeviderImage text = {translateLocal(moto)} />
             <OurPartners />

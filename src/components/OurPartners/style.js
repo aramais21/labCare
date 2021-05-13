@@ -9,12 +9,8 @@ export const Partner = styled.a`
     border-radius: 100%;
     overflow: hidden;
     display: inline-block;
-    // margin: 0 42px;
     position: relative;
     cursor: pointer;
-    // &:first-child {
-    //     margin-left: 0px;
-    // }
 `;
 
 export const PartnerLogo = styled.img`

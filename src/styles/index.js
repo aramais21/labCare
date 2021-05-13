@@ -34,8 +34,8 @@ export const Image = styled.div`
     height: ${props => props.height? props.height:'100%'};
     ${props => !props.noMargin?'margin: 33.5px 0;':''}
     ${props => mediaMaxWidth(smBreakingPoint, `
-        max-width: ${props.mobileWidth};
-        max-height: ${props.mobileHeight};
+        width: ${props.mobileWidth};
+        height: ${props.mobileHeight};
     `)}
 `;
 

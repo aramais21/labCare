@@ -1,8 +1,12 @@
-import React, { useEffect } from 'react';
+import React, { useCallback, useEffect, useRef } from 'react';
 import {Link} from 'react-router-dom';
 import {useDispatch, useSelector} from 'react-redux';
 
 import {fecthSocLinks, selectSocLinks, selectSocLinkStatus} from '../../redux/slices/socialLinks';
+import useFetch from '../../Hooks/useFetch';
+import useTranslate from '../../Hooks/useTranslate';
+import { placeholder, titles } from '../../data/footer';
+import { buttonLabels, regularNavBar } from '../../data';
 
 import {Image} from '../../styles'
 import {
@@ -24,15 +28,15 @@ import {
     ColumnTitle,
     ColumnElement,
 } from './style';
-import useTranslate from '../../Hooks/useTranslate';
-import { placeholder, titles } from '../../data/footer';
-import { buttonLabels, regularNavBar } from '../../data';
+
 
 const Footer = () => {
     const dispatch = useDispatch();
     const socLinks = useSelector(selectSocLinks);
     const status = useSelector(selectSocLinkStatus);
     const {translateLocal} = useTranslate();
+    const emailRef = useRef();
+    const {loading, request} = useFetch();
 
     useEffect(() => {
         if(status === 'idle') {
@@ -40,6 +44,13 @@ const Footer = () => {
             return
         }
     },[status, dispatch]);
+
+    const buttonHandler = useCallback(async () => {
+        if(!loading) {
+            await request('/email', 'POST', {email: emailRef.current.value}, {});
+            emailRef.current.value = '';
+        }
+    },[loading, request])
 
     return(
         <FooterWrapper>
@@ -62,8 +73,8 @@ const Footer = () => {
 
                 <Column  marginRight = '0px' marginLeft='0px'>
                     <EmailText>{translateLocal(titles.subscribe)}</EmailText>
-                    <EmailInput placeholder = {translateLocal(placeholder)} ></EmailInput>
-                    <EmailBtn>{translateLocal(buttonLabels.send)}</EmailBtn>
+                    <EmailInput ref={emailRef} placeholder = {translateLocal(placeholder)}  ></EmailInput>
+                    <EmailBtn onClick={buttonHandler} >{translateLocal(buttonLabels.send)}</EmailBtn>
                 </Column>
 
                 <Column  marginRight = '0px' marginLeft='auto'>

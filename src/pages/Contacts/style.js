@@ -9,6 +9,12 @@ export const ContactWrapper = styled.div`
 export const LeftCont = styled.div`
 `;
 
+export const Rounded = styled.div`
+    overflow: hidden;
+    border-radius: 16px;
+    border: ${GREEEN_HEX} solid 0.4rem;
+`;
+
 export const RightCont = styled.div`
     display: flex;
     flex-flow: column nowrap;
@@ -25,11 +31,12 @@ export const RightCont = styled.div`
 
 export const ContactCont = styled.div`
     display: flex;
-    justify-content: space-around;
     align-items: center;
     flex-flow: row nowrap;
     margin: 16px 0;
     max-width: 500px;
+    width: 100%;
+    justify-content: space-between;
 `;
 
 export const ContactIcon = styled.div`
