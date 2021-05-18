@@ -1,15 +1,15 @@
 export const title = {
-    ARM: 'մեր գտնվելու վայրերը',
-    ENG: 'our locations',
-    RUS: 'наши локации',
+    ARM: 'մեր կոնտակտներ',
+    ENG: 'our contacts',
+    RUS: 'наши контакты',
 }
 
 export const data = [
     {
         title: {
-            ARM: 'Մեր ընկերության gmail- ը',
-            ENG: 'Our company gmail',
-            RUS: 'Наша компания gmail'
+            ARM: '',
+            ENG: '',
+            RUS: ''
         },
         secondary: 'labcarecons@gmail.com',
         src: 'https://www.dropbox.com/s/zqvt8fy0c5ikjx3/mail.png?raw=1',
@@ -25,9 +25,9 @@ export const data = [
     },
     {
         title: {
-            ARM: 'Մեր կոորդինատները',
-            ENG: 'Our coordinates',
-            RUS: 'Наши координаты'
+            ARM: '',
+            ENG: '',
+            RUS: ''
         },
         secondary: {
             ENG: 'Fuchik 13/27, 0078, Yerevan Armenia',

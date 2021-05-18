@@ -1,11 +1,11 @@
 export const titles = {
     followUs: {
-        ARM: "Հետեւեք մեզ",
+        ARM: "հետևեք մեզ",
         ENG: "FOLLOW US",
         RUS: "ПОДПИСЫВАЙТЕСЬ НА НАС"
     },
     subscribe: {
-        ARM: "ԲԱSCԱՆՈՐԴԱԳՐՎԵՔ ՄԵՐ",
+        ARM: "ԲԱԺԱՆՈՐԴԱԳՐՎԵՔ ՄԵՐ ԷԼ. ՓՈՍՏԻՆ",
         ENG: "SUBSCRIBE TO OUR NEWS LETTER",
         RUS: "ПОДПИСЫВАЙТЕСЬ НА НАШУ НОВОСТНУЮ РАССЫЛКУ"
     },

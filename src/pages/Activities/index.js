@@ -5,7 +5,8 @@ import useTranslate from '../../Hooks/useTranslate';
 
 import { data, pictures } from '../../data/activities';
 
-import { ActivityWrapper, ActivityGridComponent, Title, Text, Line, ActivityColumn, ListItem } from './style';
+import { ActivityWrapper, ActivityGridComponent, Title, Text, Line, ActivityColumn, ListItem, LinkDiv } from './style';
+import { Link } from 'react-router-dom';
  
 const Activities = () => {
     const {translateLocal} = useTranslate();
@@ -20,7 +21,12 @@ const Activities = () => {
                 if (item.type === 'text') {
                     return <Text color = {info.color} >{translateLocal(item)}</Text>
                 }
-                return <ListItem color = {info.color} >{translateLocal(item)}</ListItem>
+                else if (item.type === 'listItem') {
+                    return <ListItem color = {info.color} >{translateLocal(item)}</ListItem>
+                }
+                else {
+                    return <LinkDiv><Link to = {item.url}>{translateLocal(item.text)}</Link></LinkDiv>
+                }
             })}
             <Text color = {info.color} >{translateLocal(info.desc)}</Text>
         </ActivityGridComponent>

@@ -46,6 +46,15 @@ export const ListItem = styled.li`
     ${fontForSmallerScreen(26)}
 `;
 
+export const LinkDiv = styled.div`
+    color: blue;
+    font-family: ${MYRIAD_PRO};
+    font-size: 26px;
+    line-height: 1.2;
+    cursor: pointer;
+    margin-top: 12px;
+`;
+
 export const Title = styled.div`
     color: ${props => props.color};
     font-weight: bold;

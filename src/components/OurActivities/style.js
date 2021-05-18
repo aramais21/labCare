@@ -58,7 +58,7 @@ export const ActivityCardTitle = styled.div`
 
 export const ActivityCardText = styled.div`
     color: ${GREEEN_HEX};
-    font-size: 21px;
+    font-size: 19px;
     font-family: ${CENTURY_GOTHIC_BOLD};
     font-weight: 700;
     line-height: 1.2;
