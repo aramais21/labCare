@@ -42,7 +42,7 @@ const Add = () => {
     }
 
     return (
-        <Layout background = {GREEEN_HEX} justifyContent = 'center' >
+        <Layout background = {GREEEN_HEX} justifyContent = 'center' fixedHeight='140vh' >
             <Selection clickHandler = {clickHandler} paths = {paths} ></Selection>
             {currName===null?
                 null

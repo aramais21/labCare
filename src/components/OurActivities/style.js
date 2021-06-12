@@ -58,7 +58,7 @@ export const ActivityCardTitle = styled.div`
 
 export const ActivityCardText = styled.div`
     color: ${GREEEN_HEX};
-    font-size: 19px;
+    font-size: 14px;
     font-family: ${CENTURY_GOTHIC_BOLD};
     font-weight: 700;
     line-height: 1.2;
@@ -69,7 +69,8 @@ export const ActivityCardText = styled.div`
     white-space: pre-line;
     text-overflow: ellipsis;
     height: 300px;
-    ${fontForSmallerScreen(21)}
+    word-break: normal;
+    ${fontForSmallerScreen(14)}
     ${mediaMaxWidth(smBreakingPoint,`
         margin-top: 20px;
     `)}

@@ -4,7 +4,7 @@ import {useParams} from 'react-router-dom';
 import Layout from '../../components/Layout';
 
 import { RowFlexDiv, Image } from '../../styles';
-import { MainText, RightCont, SecondaryText,ProductWrapper} from './style';
+import { MainText, RightCont, SecondaryText,ProductWrapper, Link} from './style';
 import { GREEEN_HEX, WHITE_HEX } from '../../config/constants';
 import useFetch from '../../Hooks/useFetch';
 import Fallback from '../../components/Fallback';
@@ -32,6 +32,9 @@ const Product = () => {
                         <RightCont>
                             <MainText>{translate(data.title)}</MainText>
                             <SecondaryText>{translate(data.desc)}</SecondaryText>
+                            {data.links.map((link) =>  {
+                                return <Link href = {link.url} target="_blank" rel="noopener noreferrer" >{translate(link.text)}</Link>
+                            })}
                         </RightCont>
                     </>
                 :

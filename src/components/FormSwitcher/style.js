@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { CENTURY_GOTHIC_BOLD, GREEEN_HEX, WHITE_HEX } from "../../config/constants";
+import { CENTURY_GOTHIC, CENTURY_GOTHIC_BOLD, GREEEN_HEX, WHITE_HEX } from "../../config/constants";
 import { fontForSmallerScreen } from "../../config/helpers";
 
 export const Form = styled.form`
@@ -47,4 +47,23 @@ export const Product = styled.div`
         }
         return 'cursor: pointer;';
     }}
+`;
+
+export const Chips = styled.div`
+    display: flex;
+    flex-flow: row wrap;
+`;
+
+export const Chip = styled.div`
+    width: 150px;
+    background-color: ${WHITE_HEX};
+    border-radius: 40px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 10px 5px;
+    align-items: center;
+    color: ${GREEEN_HEX};
+    cursor: pointer;
+    font-family: ${CENTURY_GOTHIC};
 `;

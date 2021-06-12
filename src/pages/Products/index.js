@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import {Link} from 'react-router-dom';
+import {Link, useLocation} from 'react-router-dom';
 
 import Layout from '../../components/Layout'
 import SectionDeviderText from '../../components/SectionDeviderText';
@@ -18,13 +18,25 @@ const Products = () => {
     const status = useSelector(selectProductStatus);
     const {translate, translateLocal} = useTranslate();
     const dispatch = useDispatch();
+    const id = new URLSearchParams(useLocation().search).get('id');
 
     useEffect(() => {
         if(status === 'idle') {
             dispatch(fecthProducts());
             return;
         }
-    })
+    },[dispatch, status])
+
+    useEffect(() => {
+        if(status === 'success' && id) {
+            const product = products.find((item) => item._id === id)
+            const productIndex = products.indexOf(product);
+            if(productIndex>=0) {
+                setSelectedCategory(productIndex)
+                console.log(productIndex, "<<<<")
+            }
+        }
+    },[status, products, id])
 
     const clickhandler = useCallback((index) => {
         if(selectedCategory !== index) {

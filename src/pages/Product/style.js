@@ -47,3 +47,11 @@ export const SecondaryText = styled.div`
         margin-bottom: 64px;
     `)}
 `;
+
+export const Link = styled.a`
+    font-family: ${MYRIAD_PRO};
+    font-size: 16px;
+    line-height: 1.2;
+    margin: 12px 0;
+    color: blue;
+`;

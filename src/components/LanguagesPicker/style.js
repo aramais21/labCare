@@ -31,7 +31,6 @@ export const FlagList = styled.div`
   width: 64vw;
   max-width: 200px;
   height: 50px;
-  background-color: ${WHITE_HEX};
   opacity: ${props => props.isActive?1:0};
   transition: 0.2s linear all;
   ${mediaMaxWidth(smBreakingPoint,`

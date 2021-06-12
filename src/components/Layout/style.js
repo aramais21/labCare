@@ -5,7 +5,10 @@ export const LayoutDiv = styled.div`
     width: 100vw;
     ${props => {
         if(props.fixedHeight) {
-            return `height: ${props.fixedHeight}px;`
+            if(typeof props.fixedHeight === 'number') {
+                return `height: ${props.fixedHeight}px;`
+            }
+            return `height: ${props.fixedHeight};`
         }
         return 'min-height: 100vh;'
     }}
