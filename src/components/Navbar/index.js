@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 // Components 
 import logo from '../../assets/logo.jpg';
 import { regularNavBar } from '../../data';
-import useTranslate from '../.../Hooks/useTranslate';
+import useTranslate from '../..../hooks/useTranslate';
 import { logOut, selectIsLoggedIn } from '../../redux/slices/auth';
 import LanguagePicker from '../LanguagesPicker';
 import MenuItem from '../MenuItem';

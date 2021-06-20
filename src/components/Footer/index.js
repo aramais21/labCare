@@ -3,8 +3,8 @@ import {Link} from 'react-router-dom';
 import {useDispatch, useSelector} from 'react-redux';
 
 import {fecthSocLinks, selectSocLinks, selectSocLinkStatus} from '../../redux/slices/socialLinks';
-import useFetch from '../.../Hooks/useFetch';
-import useTranslate from '../.../Hooks/useTranslate';
+import useFetch from '../..../hooks/useFetch';
+import useTranslate from '../..../hooks/useTranslate';
 import { placeholder, titles } from '../../data/footer';
 import { buttonLabels, regularNavBar } from '../../data';
 

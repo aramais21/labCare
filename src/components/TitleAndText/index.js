@@ -1,7 +1,7 @@
 import React, { memo } from 'react';
 import { isEqual } from 'lodash';
 
-import useTranslate from '../.../Hooks/useTranslate';
+import useTranslate from '../..../hooks/useTranslate';
 
 import {Wrapper, Title, Text, ListItem} from './style';
 

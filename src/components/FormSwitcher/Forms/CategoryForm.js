@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 
 import InputWDropbox from '../../InputWDropBox';
 import { selectProducts } from '../../../redux/slices/products';
-import useTranslate from '../../.../Hooks/useTranslate';
+import useTranslate from '../../..../hooks/useTranslate';
 import { langEnum } from '../../../config/constants';
 
 import {Input, Image} from '../../../styles';
