@@ -5,8 +5,8 @@ export const mainTitle = {
         RUS: "Добро пожаловать в labcare"
     },
     moto: {
-        ARM: "պատահական տեքստ",
-        ENG: "random text",
+        ARM: "Մենք կարող ենք օգնել ձեզ ստանալ ՃՇՄԱՐՏՈՒԹՅՈՒՆԸ ...",
+        ENG: "We can help you get THE TRUTH...",
         RUS: "случайный текст"
     },
 

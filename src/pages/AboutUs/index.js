@@ -4,7 +4,7 @@ import OurStrategy from '../../components/OurStrategy';
 
 import Slider from '../../components/Slider';
 import { mainTitle } from '../../data/aboutUs';
-import useTranslate from '../../Hooks/useTranslate';
+import useTranslate from '../.../Hooks/useTranslate';
 
 import {AboutWrapper} from './style';
 

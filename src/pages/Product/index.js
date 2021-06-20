@@ -6,10 +6,10 @@ import Layout from '../../components/Layout';
 import { RowFlexDiv, Image } from '../../styles';
 import { MainText, RightCont, SecondaryText,ProductWrapper, Link} from './style';
 import { GREEEN_HEX, WHITE_HEX } from '../../config/constants';
-import useFetch from '../../Hooks/useFetch';
+import useFetch from '../.../Hooks/useFetch';
 import Fallback from '../../components/Fallback';
 
-import useTranslate from '../../Hooks/useTranslate';
+import useTranslate from '../.../Hooks/useTranslate';
 
 const Product = () => {
     const {id} = useParams();

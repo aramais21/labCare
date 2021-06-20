@@ -6,7 +6,7 @@ export const LangWrapper = styled.div`
   max-width: 200px;
   width: 80%;
   position: absolute;
-  left: 25px;
+  right: 25px;
   bottom: -75px;
   height: 50px;
   overflow: hidden;
@@ -15,9 +15,8 @@ export const LangWrapper = styled.div`
     display: ${props.isActive?'block':'none'};
     position: fixed;
     bottom: 12.5px;
-    left: calc(calc(80vw-200)/2);
     max-width: 64vw;
-    left: 8vw;
+    right: 8vw;
     height: 12vw;
     `)}
 
@@ -48,10 +47,10 @@ export const Flag = styled.div`
   margin: 0 6.25px;
   cursor: pointer;
   &:first-child {
-    margin-left: 75px;
+    margin-left: 12.5px;
   }
   &:last-child {
-    margin-right: 12.5px;
+    margin-right: 75px;
   }
   ${
   mediaMaxWidth(smBreakingPoint, `
@@ -72,7 +71,7 @@ export const MainFlag = styled.div`
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 12.5px;
+  right: 12.5px;
   margin: auto ;
   width: 50px;
   height: 37.5px;
