@@ -1,6 +1,6 @@
 import React from 'react';
 
-import useTranslate from '../..../hooks/useTranslate';
+import useTranslate from '../../Hooks/useTranslate';
 import { ourStrategy } from '../../data/aboutUs';
 
 import { RowFlexDiv, Image } from '../../styles';

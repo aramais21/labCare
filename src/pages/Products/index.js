@@ -9,7 +9,7 @@ import { DownArrow , BottomContInner ,ProductsWrapper ,CategoryWrapper ,Category
 import { GREEEN_HEX, WHITE_HEX } from '../../config/constants';
 import { useDispatch, useSelector } from 'react-redux';
 import { fecthProducts, selectProducts, selectProductStatus } from '../../redux/slices/products';
-import useTranslate from '../..../hooks/useTranslate';
+import useTranslate from '../../Hooks/useTranslate';
 import { ourProducts } from '../../data/products';
 
 const Products = () => {

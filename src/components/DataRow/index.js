@@ -7,7 +7,7 @@ import { fecthPartners, selectPartners, selectPartnerStatus } from '../../redux/
 import { fecthProducts, selectProducts, selectProductStatus } from '../../redux/slices/products';
 import { fecthSlides, selectSlides, selectSlideStatus } from '../../redux/slices/slides';
 import { fecthSocLinks, selectSocLinks, selectSocLinkStatus } from '../../redux/slices/socialLinks';
-import useTranslate from '../..../hooks/useTranslate';
+import useTranslate from '../../Hooks/useTranslate';
 
 import { Row, Image } from '../../styles';
 import { TextCont, Wrapper} from './style';
