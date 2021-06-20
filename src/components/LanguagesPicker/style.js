@@ -50,7 +50,7 @@ export const Flag = styled.div`
     margin-left: 12.5px;
   }
   &:last-child {
-    margin-right: 75px;
+    margin-right: 75px; 
   }
   ${
   mediaMaxWidth(smBreakingPoint, `
